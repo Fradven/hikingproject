@@ -1,5 +1,5 @@
 <?php
-    $servername = "127.0.0.1";
+    $servername = "mysql";
     $dbUsername = "root";
     $dbPassword = "root";
     $dbname = "hiking";
@@ -12,3 +12,5 @@
         echo $pdo_exception->getMessage();
         exit;
     }
+
+

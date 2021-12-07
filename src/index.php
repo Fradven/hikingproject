@@ -1,5 +1,5 @@
 <?php 
-  include_once('./includes/dbh.inc.php');
+  require_once('./includes/dbh.inc.php');
   try{
   $stmt = $conn->prepare("SELECT * FROM hikes");
   $stmt->execute();
@@ -7,6 +7,7 @@
 } catch(PDOException $e) {
   echo "connection Foiled!";
   exit();}
+  $difficulties = ['easy', 'moderate', 'hard'];
 ?>
 
 <!DOCTYPE html>
