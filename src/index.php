@@ -27,9 +27,9 @@
           <p class="difficulty">'.$difficulties[$hike['difficulty']].'</p>
           <p class="distance">'.$hike['distance'].'</p>
           <p class="duration">'.$hike['duration'].'</p>
-          <p class="elevation">'.$hike['elevation'].'</p>
+          <p class="elevation">'.$hike['elevation_gain'].'</p>
           <p class="delete"><button>DEL</button></p>
-          <p class="modify"><a href=php/update.php?ID='.$hike['ID'].'>MOD</a></p>
+          <p class="modify"><a href=php/update.php?ID='.$hike['id'].'>MOD</a></p>
       </div>
       ';
       }
