@@ -19,6 +19,8 @@
     <title>Hiking Project</title>
 </head>
 <body>
+  <?php echo '<a href="create.php">New Hike</a>' ?>
+  
   <?php
     foreach ($hikes as $hike) {
       echo '
