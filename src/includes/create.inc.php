@@ -5,8 +5,8 @@
         $name = $_POST["name"];
         $travel = $_POST["travel"];
         $duration = $_POST["duration"];
-        $elevation = $_POST["elevation"];
-        $ooguu = $_POST["ooguu"]; 
+        $elevation = $_POST["elevation"]; 
+        $difficulty = $_POST["difficulty"]; 
 
         require_once 'mysqli.inc.php';
         require_once 'function.inc.php';
