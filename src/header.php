@@ -12,14 +12,10 @@
         <a href="#">
           <img src="img/logo_hiking.png" img alt="Hiking Project Logo"
         /></a>
-        <ul class="nav-menu">
-          <li class="button"><a href="#">Services</a></li>
-          <li class="button"><a href="#">About</a></li>
-            <a class="bigbutton" href="#">CONTACT</a>
-        </ul>
-      </nav>
-
-      <h1>Hiking project</h1>
+        <form method="GET">
+            <input type="search" name="s" placeholder="Rechercher un hiking">
+            <input type="submit" name="envoyé">
+        </form>
 
 </header>    
 </body>
