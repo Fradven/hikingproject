@@ -23,7 +23,11 @@
     foreach ($hikes as $hike) {
       echo '
       <div class="card">
-          <p class="name">'.$hike['name'].'</p>
+          <h2 class="card__name">'.$hike['name'].'</h2>
+          <div class="card__difficulty"></div>
+          <div class="card__difficulty"></div>
+          <div class="card__difficulty"></div>
+          <div class="card__difficulty"></div>
           <p class="difficulty">'.$difficulties[$hike['difficulty']].'</p>
           <p class="distance">'.$hike['distance'].'</p>
           <p class="duration">'.$hike['duration'].'</p>
