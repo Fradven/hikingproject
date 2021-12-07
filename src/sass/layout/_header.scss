@@ -1,0 +1,17 @@
+.header {
+    height: 3rem;
+    background-color: pink;
+    position: relative;
+   
+    &__container {
+        width: 150px;
+
+    &__logo {
+        img {
+            width: 100%;
+            height: auto;
+    
+        }
+    }
+}
+}

@@ -1,0 +1,15 @@
+.header {
+  height: 3rem;
+  background-color: pink;
+  position: relative;
+}
+
+.header__container {
+  width: 150px;
+}
+
+.header__container__logo img {
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=main.css.map */
