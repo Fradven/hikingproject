@@ -20,13 +20,13 @@
             <input type="text" id="elevation" name="elevation"  placeholder="In meters..."><br>
 
             <label for="difficulty"> Difficulty: </label></br>
-            <input type="radio" id="difficulty" name="difficulty" value="hard">
+            <input type="radio" id="hard" name="difficulty" value="hard">
             <label for="hard">Hard</label><br>
 
-            <input type="radio" id="difficulty" name="difficulty" value="medium">
+            <input type="radio" id="medium" name="difficulty" value="medium">
             <label for="medium">Medium</label><br>
 
-            <input type="radio" id="difficulty" name="difficulty" value="easy">
+            <input type="radio" id="easy" name="difficulty" value="easy">
             <label for="easy">Easy</label></br>
 
             <button type="submit" value="submit" name="submit">Submit</button>
