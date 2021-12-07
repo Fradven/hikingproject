@@ -1,8 +1,8 @@
 <?php
-    $servername = "127.0.0.1";
-    $dbUsername = "root";
-    $dbPassword = "root";
-    $dbname = "hiking";
+    $servername = "188.166.24.55";
+    $dbUsername = "jepsen5-cherylstrayed";
+    $dbPassword = "gxYOzrCJQ^.2CX85HsFR";
+    $dbname = "jepsen5-cherylstrayed";
 
     try{
         $conn = new PDO("mysql:host=$servername;dbname=$dbname;port=3306", $dbUsername, $dbPassword);
