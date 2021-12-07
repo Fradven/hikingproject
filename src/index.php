@@ -23,17 +23,28 @@
     foreach ($hikes as $hike) {
       echo '
       <div class="card">
-          <h2 class="card__name">'.$hike['name'].'</h2>
-          <div class="card__difficulty"></div>
-          <div class="card__difficulty"></div>
-          <div class="card__difficulty"></div>
-          <div class="card__difficulty"></div>
-          <p class="difficulty">'.$difficulties[$hike['difficulty']].'</p>
-          <p class="distance">'.$hike['distance'].'</p>
-          <p class="duration">'.$hike['duration'].'</p>
-          <p class="elevation">'.$hike['elevation_gain'].'</p>
-          <p class="delete"><button>DEL</button></p>
-          <p class="modify"><a href=php/update.php?ID='.$hike['id'].'>MOD</a></p>
+        <h2 class="card__name">'.$hike['name'].'</h2>
+
+        <div class="card__difficulty">
+          <p>'.$difficulties[$hike['difficulty']].'</p>
+        </div>
+
+        <div class="card__distance">
+          <p>'.$hike['distance'].'</p>
+        </div>
+
+        <div class="card__duration">
+          <p>'.$hike['duration'].'</p>
+        </div>
+
+        <div class="card__elevation">
+          <p>'.$hike['elevation_gain'].'</p>
+        </div>
+
+        <div class="card__ctn-btn">
+          <button calsss="card__btn delete">DELETE</button>
+          <button class="card__btn modify"><a href=php/update.php?ID='.$hike['id'].'>EDIT</a></button>
+        </div>
       </div>
       ';
       }
