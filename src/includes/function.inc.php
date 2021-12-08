@@ -10,28 +10,47 @@
         return $result;
     }
 
-    //check if the name has been inputed already
-    /* function invalidName($name) {
+    function filterdName($name) {
+        $newstr = filter_var($name, FILTER_SANITIZE_STRING);
+        return $newstr;
+    }
+
+    function filterdDistance($travel) {
         $result;
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $name)) {
+        if(!$newfloat = filter_var($travel, FILTER_VALIDATE_FLOAT)){
             $result = true;
         } else {
             $result = false;
         }
         return $result;
-    } */
+    }
 
-    //check if distance is a float
-/*     function invalidTravel($travel) {
+    function filterdDuration($duration) {
+        $newstr = filter_var($duration, FILTER_SANITIZE_STRING);
+        return $newstr;
+    }
+
+    function filterdElevation($elevation) {
         $result;
-        if (empty($name)  || empty($travel)  || empty($duration)  || empty($elevation)  || empty($difficulty)) {
+        if(!$newInt = filter_var($elevation, FILTER_VALIDATE_INT)){
             $result = true;
         } else {
             $result = false;
         }
         return $result;
-    } */
+    }
+    //check if the name has been inputed had valid character
+    function invalidName($name) {
+        $result;
+        if (!preg_match("/^[a-zA-Z0-9._-]$/", $name)) {
+            $result = true;
+        } else {
+            $result = false;
+        }
+        return $result;
+    }
 
+    //Input data from the create page to the database
     function createUser($conn, $name, $difficulty, $travel, $duration, $elevation) {
         try {
 
