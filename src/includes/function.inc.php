@@ -49,5 +49,16 @@
             header("location: ../create.php?error=invalid");
             exit();
           }
+
+        function deleteUser($id){
+            try {
+                $conn = getDatabaseConnexion();
+                $requete= "DELETE from hikes where id = '$id' ";
+                $stmt = $con->query($requete);
+            }
+            catch(PDOException $e) {
+                echo $sql . "<br>" . $e->getMessage();
+            }
+        }
     }
 
