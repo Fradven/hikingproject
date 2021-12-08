@@ -28,7 +28,7 @@
         <h2 class="card__name">'.$hike['name'].'</h2>
 
         <div class="card__difficulty">
-          <p>'.$difficulties[$hike['difficulty']].'</p>
+          <p>'.$hike['difficulty'].'</p>
         </div>
 
         <div class="card__distance">

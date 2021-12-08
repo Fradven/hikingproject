@@ -8,15 +8,15 @@
         $elevation = $_POST["elevation"]; 
         $difficulty = $_POST["difficulty"]; 
 
-        require_once 'mysqli.inc.php';
+        require_once 'dbh.inc.php';
         require_once 'function.inc.php';
 
-        /* if (emptyInputCreat($name, $travel, $duration, $elevation, $difficulty) !== false) {
+        if (emptyInputCreat($name, $difficulty, $travel, $duration, $elevation) !== false) {
             header("location: ../create.php?error=emptyinput");
             exit();
         }
 
-        if (invalidName($name) !== false){
+        /* if (invalidName($name) !== false){
             header("location: ../create.php?error=invalidname");
             exit();
         } */
@@ -26,7 +26,7 @@
             exit();
         } */
 
-        createUser($conn, $name, $travel, $duration, $elevation, $difficulty);
+        createUser($conn, $name, $difficulty, $travel, $duration, $elevation);
 
     } else {
         header("location:./index.php");

@@ -32,18 +32,22 @@
         return $result;
     } */
 
-    function createUser($conn, $name, $travel, $duration, $elevation, $difficulty) {
-        $sql = "INSERT INTO hikes (name, difficulty, distance, duration, elevation_gain) VALUES (?, ?, ?, ?, ?);";
-        $stmt = mysqli_stmt_init($conn);
-        if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("location: ../create.php?error=stmterror");
+    function createUser($conn, $name, $difficulty, $travel, $duration, $elevation) {
+        try {
+
+            $sql = $conn->prepare("INSERT INTO hikes (name, difficulty, distance, duration, elevation_gain) VALUES (:name, :difficulty, :distance, :duration, :elevation_gain)");
+            $sql->bindParam(':name', $name, PDO::PARAM_STR, 55);
+            $sql->bindParam(':difficulty', $difficulty, PDO::PARAM_STR, 11);
+            $sql->bindParam(':distance', $travel, PDO::PARAM_STR, 50);
+            $sql->bindParam(':duration', $duration, PDO::PARAM_STR, 50);
+            $sql->bindParam(':elevation_gain', $elevation, PDO::PARAM_INT);
+            $sql->execute();
+               
+            header("location: ../create.php?success");
             exit();
-        }
-
-        mysqli_stmt_bind_param($stmt, 'sssis', $name, $travel, $duration, $elevation, $difficulty);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
-
-        header("location: ../create.php?success");
-        exit();
+        } catch(PDOException $e) {
+            header("location: ../create.php?error=invalid");
+            exit();
+          }
     }
+
