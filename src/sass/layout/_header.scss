@@ -1,17 +1,32 @@
 .header {
-    height: 3rem;
-    background-color: pink;
-    position: relative;
-   
-    &__container {
-        width: 150px;
-
-    &__logo {
-        img {
-            width: 100%;
-            height: auto;
+    background-image: url('../../img/background-image.jpg') no-repeat center; 
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    padding: 1, 5rem;
     
-        }
+    &__container {
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 4rem;
+
+        img {
+                width: 17rem;
+                height: 17rem;
+            }
+        
     }
 }
+   
+h1 {
+    color: $brown-color;
+    font-size: 3.5rem;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    padding-top: 7.3rem;
+    padding-bottom: 6.3rem;
+}
+
 }

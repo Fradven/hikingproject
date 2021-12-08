@@ -1,15 +1,32 @@
 .header {
-  height: 3rem;
-  background-color: pink;
-  position: relative;
+  background-image: url("../../img/background-image.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  padding: 1, 5rem;
 }
 
-.header__container {
-  width: 150px;
+.header__container__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem 4rem;
 }
 
-.header__container__logo img {
-  width: 100%;
-  height: auto;
+.header__container__top img {
+  width: 17rem;
+  height: 17rem;
+}
+
+.header h1 {
+  color: #4B2D20;
+  font-size: 3.5rem;
+  letter-spacing: 0.6rem;
+  text-align: center;
+  padding-top: 7.3rem;
+  padding-bottom: 6.3rem;
 }
 /*# sourceMappingURL=main.css.map */
