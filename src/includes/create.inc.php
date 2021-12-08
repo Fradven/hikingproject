@@ -16,10 +16,25 @@
             exit();
         }
 
-        /* if (invalidName($name) !== false){
+        if ($name !== filterdName($name)){
             header("location: ../create.php?error=invalidname");
             exit();
-        } */
+        }
+
+        if (filterdDistance($travel) !== false){
+            header("location: ../create.php?error=invalidDistance");
+            exit();
+        }
+
+        if ($duration !== filterdDuration($duration)){
+            header("location: ../create.php?error=invalidduration");
+            exit();
+        }
+
+        if (filterdDistance($elevation) !== false){
+            header("location: ../create.php?error=invalidDistance");
+            exit();
+        }
 
         /* if (invalidTravel($travel) !== false){
             header("location: ../create.php?error=invalidname");
