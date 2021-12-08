@@ -7,6 +7,7 @@
         $duration = $_POST["duration"];
         $elevation = $_POST["elevation"]; 
         $difficulty = $_POST["difficulty"]; 
+        $id = $_POST["id"];
 
         require_once 'dbh.inc.php';
         require_once 'function.inc.php';
@@ -41,7 +42,7 @@
             exit();
         } */
 
-        updateHike($conn, $name, $difficulty, $travel, $duration, $elevation);
+        updateHike($conn, $id, $name, $difficulty, $travel, $duration, $elevation);
 
     } else {
         header("location:./index.php");

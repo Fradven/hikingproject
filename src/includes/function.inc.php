@@ -71,7 +71,7 @@
     }
 
     //Input data from the create page to the database
-    function updateHike($conn, $name, $difficulty, $travel, $duration, $elevation) {
+    function updateHike($conn, $id, $name, $difficulty, $travel, $duration, $elevation) {
         try {
 
             $sql = $conn->prepare(
@@ -80,7 +80,7 @@
             difficulty = :difficulty,
             distance = :distance,
             duration = :duration,
-            elevation_gain = :elevation_gain,
+            elevation_gain = :elevation_gain
             WHERE id = :id");
 
             $sql->bindParam(':name', $name, PDO::PARAM_STR, 55);
@@ -88,6 +88,7 @@
             $sql->bindParam(':distance', $travel, PDO::PARAM_STR, 50);
             $sql->bindParam(':duration', $duration, PDO::PARAM_STR, 50);
             $sql->bindParam(':elevation_gain', $elevation, PDO::PARAM_INT);
+            $sql->bindParam(':id', $id, PDO::PARAM_INT);
             $sql->execute();
                
             header("location: ../index.php?success");

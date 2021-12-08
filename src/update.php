@@ -1,7 +1,7 @@
 <?php
     require_once "header.php";
     require_once('./includes/dbh.inc.php');
-    $id = $_GET ["id"];
+    $id = $_GET["id"];
     try {
         $stmt = $conn->prepare("SELECT * FROM hikes WHERE id = $id");
         $stmt->execute();
@@ -10,7 +10,7 @@
         echo $e->getMessage();
         echo "connection Foiled!";
         exit();
-    }
+    }   
 ?>
 <section class="create">
     <h2 class="create__title">Edit the trail</h2>
@@ -39,6 +39,8 @@
 
             <input type="radio" id="easy" name="difficulty" value="easy">
             <label for="easy">Easy</label></br>
+
+            <input type="hidden" name="id" value="<?= $id ?>" />
 
             <button type="submit" value="submit" name="submit">Submit</button>
         </form>
