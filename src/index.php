@@ -45,7 +45,7 @@
 
         <div class="card__ctn-btn">
           <button calsss="card__btn delete">DELETE</button>
-          <button class="card__btn modify"><a href=php/update.php?ID='.$hike['id'].'>EDIT</a></button>
+          <button class="card__btn modify"><a href=update.php?id='.$hike['id'].'>EDIT</a></button>
         </div>
       </div>
       ';
