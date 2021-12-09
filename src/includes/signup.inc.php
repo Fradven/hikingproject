@@ -10,22 +10,42 @@
         require_once 'dbh.inc.php';
         require_once 'function.inc.php';
 
+        //check if all input a filled and filter all the inputed  ellement to see if they are clean
         if (emptyInputSignup($name, $email, $pwd, $repwd) !== false) {
-            header("location: ../create.php?error=emptyinput");
+            header("location: ../signup.php?error=emptyinput");
             exit();
         }
 
         if ($name !== filterdName($name)){
-            header("location: ../create.php?error=invalidname");
+            header("location: ../signup.php?error=invalidusername");
             exit();
         }
 
+        if ($pwd !== filterdPwd($pwd)){
+            header("location: ../signup.php?error=invalidpwd");
+            exit();
+        }
+
+        //match the password to the confirmation
+        if (matchRepwd($pwd, $repwd) !== false){
+            header("location: ../signup.php?error=pwddontmatch");
+            exit();
+        }
+
+        //check if email is valid
         if (filterdEmail($email) !== false){
-            header("location: ../create.php?error=invalidDistance");
+            header("location: ../signup.php?error=invalidemail");
             exit();
         }
 
-        signup($conn, $email, $pwd, $repwd);
+        //check if username is taken
+        if(uidExist($conn, $name, $email) !== false){
+            header("location: ../signup.php?error=usernametaken");
+            exit();
+        }
+
+        //send input to the database
+        signup($conn, $name, $email, $pwd);
 
     } else {
         header("location:./index.php");

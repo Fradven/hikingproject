@@ -19,6 +19,8 @@
             <label for="repwd">Confirm Password: </label><br>
             <input type="password" id="repwd" name="repwd"><br>
 
+            <button type="submit" value="submit" name="submit">Submit</button>
+
         </form>
     </div>
 </section>
