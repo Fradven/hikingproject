@@ -1,0 +1,25 @@
+h1 {
+    color: blue;
+}
+
+
+.custom-shape-divider-bottom-1639042233 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1639042233 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 174px;
+}
+
+.custom-shape-divider-bottom-1639042233 .shape-fill {
+    fill: #FFFFFF;
+}
