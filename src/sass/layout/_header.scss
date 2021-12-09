@@ -1,0 +1,49 @@
+
+.header {
+.custom-shape-divider-top-1639046411 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1639046411 svg {
+    position: relative;
+    display: block;
+    width: calc(120% + 1.3px);
+    height: 116px;
+}
+
+.custom-shape-divider-top-1639046411 .shape-fill {
+    fill: #E17141;
+}
+
+    &__container {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 800px;
+    background-image: url(../../img/background_image.jpg);
+
+        img {
+                width: 15rem;
+                height: 15rem;
+            }
+        
+    }
+
+   
+h1 {
+    color: $beige-color;
+    font-family: 'Raleway', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 1.2rem;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-weight: 300;
+}
+
+}
