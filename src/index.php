@@ -20,6 +20,7 @@
 </head>
 <body>
   <?php echo '<a href="create.php">New Hike</a>' ?>
+  <?php echo '<a href="signup.php">Sign Up</a>' ?>
   
   <?php
     foreach ($hikes as $hike) {

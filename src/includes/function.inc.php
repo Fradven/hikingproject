@@ -1,5 +1,5 @@
 <?php
-    //check for empty form
+    //check for empty form in create
     function emptyInputCreat($name, $travel, $duration, $elevation, $difficulty) {
         $result;
         if (empty($name)  || empty($travel)  || empty($duration)  || empty($elevation)  || empty($difficulty)) {
@@ -10,6 +10,18 @@
         return $result;
     }
 
+    //check for empty form in signup
+    function emptyInputSignup($name, $email, $pwd, $repwd) {
+        $result;
+        if (empty($name)  || empty($email)  || empty($pwd)  || empty($repwd)) {
+            $result = true;
+        } else {
+            $result = false;
+        }
+        return $result;
+    }
+
+    //filter for different page to see if there are no code injection
     function filterdName($name) {
         $newstr = filter_var($name, FILTER_SANITIZE_STRING);
         return $newstr;
@@ -61,7 +73,7 @@
             $sql->bindParam(':duration', $duration, PDO::PARAM_STR, 50);
             $sql->bindParam(':elevation_gain', $elevation, PDO::PARAM_INT);
             $sql->execute();
-               
+                   
             header("location: ../create.php?success");
             exit();
         } catch(PDOException $e) {
@@ -81,7 +93,7 @@
         }
     }
 
-    //Input data from the create page to the database
+    //Update data in the database
     function updateHike($conn, $id, $name, $difficulty, $travel, $duration, $elevation) {
         try {
 
