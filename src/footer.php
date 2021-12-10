@@ -1,28 +1,36 @@
-<?php
-include ('./includes/dbh.inc.php');
-$allhikes = $conn->query('SELECT * FROM hikes ORDER BY id DESC');
-if(isset($_GET['s']) AND !empty($_GET['s'])){
-    $recherche = htmlspecialchars($_GET['s']);
-    $allhikes = $conn->query('SELECT name FROM hikes WHERE name LIKE "%'.$recherche.'%" ORDER BY id DESC'
-);
-}
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass/main.css">
-    <title>Hiking project</title>
-</head>
-</div>
 <footer>
+<nav>
+        <a href="#">
+          <img
+            class="logo"
+            src="../../img/logo_hiking.png"
+            img
+            alt="hiking project logo"
+          />
+        </a>
+        
+        <ul class="socialmedia">
+          <li>
+            <a class="social" href="#">
+              <img src="../../img/facebook.png" img alt="facebook"
+            /></a>
+          </li>
 
-</div>
-    <h1>fOOIKING</h1>
+          <li>
+            <a class="social" href="#">
+              <img src="../../img/instagram.png" img alt="instagram"
+            /></a>
+          </li>
 
-</div>
+          <li>
+            <a class="social" href="#">
+              <img src="../../img/twitter.png" img alt="twitter"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <p> © 2021 - Hiking Project - Mentions légales - Vie privée </p>
 
 </footer>    
 </body>
+</html>
