@@ -95,23 +95,23 @@
     function uidExist($conn, $name, $email) {
         try {
         $sql = $conn->prepare("SELECT * FROM user WHERE userName = :userName OR userEmail = :userEmail");
-        $sql->bindParam(':name', $name, PDO::PARAM_STR, 45);
+        $sql->bindParam(':userName', $name, PDO::PARAM_STR, 45);
         $sql->bindParam(':userEmail', $email, PDO::PARAM_STR, 45);
         $sql->execute();
         $userData = $sql->fetch(PDO::FETCH_ASSOC);
         
         $result;
 
-        if (!$userData) {
-            $result = false;
+        if ($userData) {
+            $result = true;
             return $result;
         } else {
-            $result = true;
+            $result = false;
             return $result;
         }
 
         } catch(PDOException $e) {
-            header("location: ../signup.php?error=taken");
+            echo $e->getMessage();
             exit();
     }}
 
