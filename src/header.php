@@ -23,7 +23,9 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     
 <div class="menu">
     <div class="header__container__logo">
-    <img src="img/logo_hiking.png" alt="Hiking Project">
+    <a href="index.php">
+        <img src="img/logo_hiking.png" alt="Hiking Project">
+</a>
     </div>
     <div class="top">
     <?php echo 
@@ -40,11 +42,11 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     
 
     <?php echo 
-    '<a class="newhike" href="create.php">New account</a>' 
+    '<a class="newhike" href="signup.php">New account</a>' 
     ?>
 
 <div class="login">
-        <a href="">
+        <a href="login.php">
             <img src="img/login.png" alt="login">
         </a>
     </div>
