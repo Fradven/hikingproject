@@ -21,6 +21,17 @@
         return $result;
     }
 
+    //check for empty form in login
+    function emptyInputLogin($name, $email, $pwd) {
+        $result;
+        if (empty($name)  || empty($email)  || empty($pwd)) {
+            $result = true;
+        } else {
+            $result = false;
+        }
+        return $result;
+    }
+
     //filter for different page to see if there are no code injection
     function filterdName($name) {
         $newstr = filter_var($name, FILTER_SANITIZE_STRING);
@@ -203,3 +214,31 @@
             echo $e->getMessage();
             exit();
     }}
+
+    //login the user
+    function login($conn, $name, $pwd) {
+        $uidExist = uidExist($conn, $name, $name);
+
+        if ($uidExist === false) {
+            header("location: ../login.php?error=wrongusername");
+            exit();
+        }
+
+        $pwdHashed = $uidExist["userPwd"];
+        $checkPwd = password_verify($pwd, $pwdHashed);
+
+        if ($checkPwd === false) {
+            header("location: ../login.php?error=wrongpwd");
+            exit();
+        }
+        else if ($checkPwd === true) {
+            session_start();
+            $_SESSION["userId"] = $uidExist["userID"]
+            header("location: ../index.php");
+            exit();
+        }
+        } catch(PDOException $e) {
+            echo $e->getMessage();
+            exit();
+    }
+
