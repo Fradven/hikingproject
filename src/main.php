@@ -4,43 +4,34 @@ try{
   $stmt->execute();
   $hikes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch(PDOException $e) {
-  echo "connection Foiled!";
+  echo "connection Failed!";
   exit();}
   $difficulties = ['easy', 'moderate', 'hard'];
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass/main.css">
-    <title>Hoking project</title>
-</head>
-</header>
-<div class="main">
-  <?php
-    foreach ($hikes as $hike) {
-      echo '
-      <div class="card">
-        <h2 class="card__name">'.$hike['name'].'</h2>
-
+    <section class="afficher_hikes">
+        <?php
+            if($allhikes->rowCount() > 0){
+                while($hikes = $allhikes->fetch()){
+                    ?>
+                <div class="card">
+        <h2 class="card__name"><?= $hikes['name']?></h2>
+                </div>
         <div class="card__difficulty">
-          <p>'.$hike['difficulty'].'</p>
+          <p><?= $hikes['difficulty']?></p>
         </div>
 
         <div class="card__distance">
-          <p>'.$hike['distance'].'</p>
+          <p><?= $hikes['distance']?></p>
         </div>
 
         <div class="card__duration">
-          <p>'.$hike['duration'].'</p>
+          <p><?= $hikes['duration']?></p>
         </div>
 
         <div class="card__elevation">
-          <p>'.$hike['elevation_gain'].'</p>
+          <p><?= $hikes['elevation_gain']?></p>
         </div>
       
         <div class="card__ctn-btn">
@@ -50,8 +41,13 @@ try{
           <button class="card__btn modify"><a href=php/update.php?id='.$hike['id'].'>EDIT</a></button>
         </div>
       </div>
-      ';
-    }
-    ?>
-</div>
+                    <?php
+                }
+            }else{
+                ?>
+                <p>No trails found</p>
+                <?php
+            }
+        ?>
+    </section>
 <footer>
