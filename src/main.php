@@ -38,7 +38,11 @@ try{
           <form method="post" action="delete.php?id='.$hike['id'].'">
           <input type="submit" class="card__btn delete" value="DELETE"> 
           </form>
-          <button class="card__btn modify"><a href=php/update.php?id='.$hike['id'].'>EDIT</a></button>
+
+          <?php echo 
+            '<button class="card__btn modify"><a href="update.php?id='.$hikes['id'].'">Edit</a></button>' 
+          ?>
+          
         </div>
       </div>
                     <?php
