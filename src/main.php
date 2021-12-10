@@ -11,6 +11,7 @@ try{
 
 
     <section class="afficher_hikes">
+        <div class="container">
         <?php
             if($allhikes->rowCount() > 0){
                 while($hikes = $allhikes->fetch()){
@@ -19,19 +20,19 @@ try{
         <h2 class="card__name"><?= $hikes['name']?></h2>
                 </div>
         <div class="card__difficulty">
-          <p><?= $hikes['difficulty']?></p>
+          <p>Level - <?= $hikes['difficulty']?></p>
         </div>
 
         <div class="card__distance">
-          <p><?= $hikes['distance']?></p>
+          <p>Distance - <?= $hikes['distance']?> km</p>
         </div>
 
         <div class="card__duration">
-          <p><?= $hikes['duration']?></p>
+          <p>Duration - <?= $hikes['duration']?></p>
         </div>
 
         <div class="card__elevation">
-          <p><?= $hikes['elevation_gain']?></p>
+          <p>Elevation - <?= $hikes['elevation_gain']?> m</p>
         </div>
       
         <div class="card__ctn-btn">
@@ -53,5 +54,5 @@ try{
                 <?php
             }
         ?>
+        </div>
     </section>
-<footer>
