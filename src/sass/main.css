@@ -313,7 +313,7 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  height: auto;
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -321,7 +321,7 @@ footer p {
 }
 
 .afficher_hikes .card {
-  width: 17rem;
+  width: 18rem;
   height: 27rem;
   text-align: center;
   background-image: url(../../img/cardbackground_3.jpg);
@@ -427,7 +427,7 @@ footer p {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0.5rem 2rem;
+  margin: 1rem 2rem;
 }
 
 .afficher_hikes .card__ctn-btn .delete {

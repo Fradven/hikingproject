@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    height: auto;
     position: relative;
     flex-wrap: wrap;
     padding: 2rem 0;
 .card {
-        width: 17rem;
+        width: 18rem;
         height: 27rem;
         text-align: center;
         background-image: url(../../img/cardbackground_3.jpg);
@@ -106,7 +106,7 @@
 &__ctn-btn {
     display: flex;
     justify-content: space-around;
-    margin: 0.5rem 2rem;
+    margin: 1rem 2rem;
     
     .delete{
                 background-color: $light-orange-color;
