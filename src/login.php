@@ -2,19 +2,22 @@
     include_once 'header.php';
 ?>
 <section class="create">
-    <h2 class="create__title">Login</h2>
-
-    <div class="create__ctn">
-
+<div class="create__container">
+    <h2 class="create__container__title">Welcome back</h2>
+    <div class="bordure"></div>
+    <img class="create__container__img" src="../../img/login.png" img alt="login"/>
+    <div class="create__container__ctn">
+    <h2 class="create__container__ctn__title">Login</h2>
         <form action="includes/login.inc.php" method="post" >
-            <label for="name">Enter your Username or Email: </label><br>
-            <input type="text" id="name" name="name" placeholder="Username... email@gmail.com..."><br>
+            <label class="create__container__ctn__label" for="name">Enter your Username or Email: </label><br>
+            <input class="create__container__ctn__input" type="text" id="name" name="name" placeholder="Username... email@gmail.com..."><br>
             
-            <label for="pwd">Enter your Password: </label><br>
-            <input type="password" id="pwd" name="pwd"><br>
+            <label class="create__container__ctn__label" for="pwd">Enter your Password: </label><br>
+            <input class="create__container__ctn__input" type="password" id="pwd" name="pwd"><br>
 
-            <button type="submit" value="submit" name="submit">Login</button>
+            <button class="create__container__ctn__button" type="submit" value="submit" name="submit">Login</button>
 
         </form>
     </div>
+</div>
 </section>
