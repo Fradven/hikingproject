@@ -51,7 +51,9 @@ try{
                 }
             }else{
                 ?>
-                <p>No trails found</p>
+                <div class="no_trails_found">
+                <p class="no_trails_found__txt">You're lost ? <br><span>No trails found...</span></p>
+                </div>
                 <?php
             }
         ?>

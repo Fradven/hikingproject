@@ -135,4 +135,31 @@
 }
 }
 }
+.no_trails_found{
+    background-image: url(../../img/notfound.jpg);
+    width: 55rem;
+    height: 35rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    box-shadow: 9px 9px 5px $gray-color;
+
+    &__txt{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: $dark-orange-color;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    margin-top: 4rem;
+    text-transform: uppercase;
+    line-height: 2rem;
+    span{
+        color:$ligth-brown-color;
+        font-size: 1.2rem;
+    }
+    }
+    }
+
+
 }

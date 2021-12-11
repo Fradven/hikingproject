@@ -458,4 +458,32 @@ footer p {
   -webkit-box-shadow: 5px 5px 5px #9D8C78;
           box-shadow: 5px 5px 5px #9D8C78;
 }
+
+.afficher_hikes .no_trails_found {
+  background-image: url(../../img/notfound.jpg);
+  width: 55rem;
+  height: 35rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  -webkit-box-shadow: 9px 9px 5px #9D8C78;
+          box-shadow: 9px 9px 5px #9D8C78;
+}
+
+.afficher_hikes .no_trails_found__txt {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: #D45721;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  margin-top: 4rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+.afficher_hikes .no_trails_found__txt span {
+  color: #79594B;
+  font-size: 1.2rem;
+}
 /*# sourceMappingURL=main.css.map */
