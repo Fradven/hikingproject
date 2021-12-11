@@ -485,6 +485,7 @@ footer p {
   margin: 0.8rem;
   -webkit-box-shadow: 5px 5px 5px #9D8C78;
           box-shadow: 5px 5px 5px #9D8C78;
+  padding-left: 1rem;
 }
 
 .create__container__ctn__button {
