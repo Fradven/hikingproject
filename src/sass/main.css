@@ -697,6 +697,7 @@ footer p {
   margin: 0.8rem;
   -webkit-box-shadow: 5px 5px 5px #9D8C78;
           box-shadow: 5px 5px 5px #9D8C78;
+  padding-left: 1rem;
 }
 
 .create__container__ctn__difficulty {
@@ -705,7 +706,7 @@ footer p {
   font-size: 1rem;
   letter-spacing: 0.2rem;
   text-align: left;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .create__container__ctn__button {

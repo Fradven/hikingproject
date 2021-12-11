@@ -65,7 +65,9 @@
             border:none;
             margin: 0.8rem;
             box-shadow: 5px 5px 5px $gray-color;
-        }
+            padding-left: 1rem;
+            }
+        
 
         &__difficulty{
             color: $gray-color;
@@ -73,7 +75,7 @@
             font-size: 1rem;
             letter-spacing: 0.2rem;
             text-align: left;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         &__button{
