@@ -245,7 +245,7 @@ table {
 
 footer {
   background-color: #EEEBD0;
-  padding: 5em 0em;
+  padding-bottom: 2rem;
 }
 
 footer .logo {
@@ -265,7 +265,6 @@ footer .menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2em auto 4em auto;
   display: flex;
   width: 350px;
 }
@@ -274,6 +273,15 @@ footer .menu a {
   font-family: "Barlow", sans-serif;
   text-decoration: none;
   color: blue;
+}
+
+footer .socialfollow {
+  font-family: 'Raleway', sans-serif;
+  color: #D45721;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
 footer .socialmedia {
@@ -301,6 +309,45 @@ footer p {
   text-align: center;
   font-weight: 200;
   font-size: 0.9rem;
-  margin: 3rem;
+  margin: 1rem;
+}
+
+footer .contactus {
+  font-family: 'Raleway', sans-serif;
+  color: #D45721;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+footer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 55rem;
+  height: 2rem;
+}
+
+footer .contact__ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+footer .contact__img {
+  width: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

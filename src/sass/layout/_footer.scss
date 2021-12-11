@@ -1,6 +1,6 @@
 footer {
     background-color: $beige-color;
-    padding: 5em 0em;
+    padding-bottom: 2rem;
   
     .logo {
       display: flex;
@@ -12,7 +12,6 @@ footer {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin: 2em auto 4em auto;
       display: flex;
       width: 350px;
   
@@ -22,7 +21,14 @@ footer {
         color: blue;
       }
     }
-  
+    .socialfollow{
+        font-family: 'Raleway', sans-serif;
+        color: $dark-orange-color;
+        text-align: center;
+        font-weight: 200;
+        font-size: 1.5rem;
+        margin: 1rem;
+      }
     .socialmedia {
       display: flex;
       justify-content: space-around;
@@ -41,6 +47,30 @@ footer {
         text-align: center;
         font-weight: 200;
         font-size: 0.9rem;
-        margin: 3rem;
+        margin: 1rem;
+    }
+    .contactus{
+        font-family: 'Raleway', sans-serif;
+        color: $dark-orange-color;
+        text-align: center;
+        font-weight: 200;
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+    .contact {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      width: 55rem;
+      height: 2rem;
+        &__{
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+        &__img{
+            width: 1rem;
+        }
     }
   }
