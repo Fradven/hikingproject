@@ -27,32 +27,67 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
         <img src="img/logo_hiking.png" alt="Hiking Project">
 </a>
     </div>
-    <div class="top">
-    <?php echo 
-    '<a class="newhike" href="create.php">Add a new Hike</a>' 
-    ?>
-<div class ="recherche">
+    <div class="menu">
+        <div>
+            <div>
+            <li class ="recherche">
 <form class ="recherche__form" method="GET">
     <div class ="recherche__search">
         <input  type="search" name="s" placeholder="Search a hike..."></div>
     <div class ="recherche__submit">
-        <input type="submit" name="Send"></div>
+        <input type="submit" name="Send" value ="🔎"></div>
     </form>
+</li>
+                <ul>
+                    <li><a href="create.php">Add a new Hike</a></li>
+                    <li><a href="create.php">New account</a></li>
+                    <li><a href="create.php">Login</a></li>
+                    <li><a href="create.php">Logout</a></li>
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
 </div>
-    
 
+<header class="header">
+<div class="header__container">
+    
+<nav class="menu">
+    <ul class="header__container__logo">
+    <img src="img/logo_hiking.png" alt="Hiking Project" href="index.php">
+    </ul>
+
+    <ul class="top">
+
+    <li class ="recherche">
+<form class ="recherche__form" method="GET">
+    <div class ="recherche__search">
+        <input  type="search" name="s" placeholder="Search a hike..."></div>
+    <div class ="recherche__submit">
+        <input type="submit" name="Send" value ="🔎"></div>
+    </form>
+</li>
+        <li class="newhike">
     <?php echo 
     '<a class="newhike" href="signup.php">New account</a>' 
     ?>
+        </li>
 
 <div class="login">
         <a href="login.php">
             <img src="img/login.png" alt="login">
         </a>
-    </div>
+    </li>
+    </li>
+<li class="logout">
+        <a href="login.php">
+            <img src="img/login.png" alt="login">
+        </a>
+    </li>
 
-    </div>
-</div>
+    </ul>
+</nav>
     
     <div class="title">
     <h1>HIKING PROJECT</h1>
