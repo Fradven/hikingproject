@@ -22,9 +22,9 @@
     }
 
     //check for empty form in login
-    function emptyInputLogin($name, $email, $pwd) {
+    function emptyInputLogin($name, $pwd) {
         $result;
-        if (empty($name)  || empty($email)  || empty($pwd)) {
+        if (empty($name)  || empty($pwd)) {
             $result = true;
         } else {
             $result = false;
@@ -219,26 +219,34 @@
     function login($conn, $name, $pwd) {
         $uidExist = uidExist($conn, $name, $name);
 
+
         if ($uidExist === false) {
             header("location: ../login.php?error=wrongusername");
             exit();
         }
 
-        $pwdHashed = $uidExist["userPwd"];
-        $checkPwd = password_verify($pwd, $pwdHashed);
+        try {
+            $sql = $conn->prepare("SELECT * FROM user WHERE userName = :userName OR userEmail = :userEmail");
+            $sql->bindParam(':userName', $name, PDO::PARAM_STR, 45);
+            $sql->bindParam(':userEmail', $name, PDO::PARAM_STR, 45);
+            $sql->execute();
+            $userInfo = $sql->fetch(PDO::FETCH_ASSOC);
 
-        if ($checkPwd === false) {
-            header("location: ../login.php?error=wrongpwd");
-            exit();
+            $checkPwd = password_verify($pwd, $userInfo['userPwd']);
+            if ($checkPwd === false) {
+                header("location: ../login.php?error=wrongpwd");
+                exit();
+            }
+            else if ($checkPwd === true) {
+                session_start();
+                $_SESSION["userId"] = $userInfo["userId"];
+                header("location: ../index.php");
+                exit();
+            }
+              
+            } catch(PDOException $e) {
+                echo $e->getMessage();
+                exit();
         }
-        else if ($checkPwd === true) {
-            session_start();
-            $_SESSION["userId"] = $uidExist["userID"]
-            header("location: ../index.php");
-            exit();
-        }
-        } catch(PDOException $e) {
-            echo $e->getMessage();
-            exit();
     }
 
