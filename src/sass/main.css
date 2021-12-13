@@ -901,7 +901,7 @@ footer .contact__img {
 
 .create__container__img {
   width: 6rem;
-  height: 6rem;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -952,5 +952,6 @@ footer .contact__img {
   border-style: none;
   -webkit-box-shadow: 5px 5px 5px #9D8C78;
           box-shadow: 5px 5px 5px #9D8C78;
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -5,7 +5,7 @@
 <div class="create__container">
     <h2 class="create__container__title">Welcome back</h2>
     <div class="bordure"></div>
-    <img class="create__container__img" src="../../img/login.png" img alt="login"/>
+    <img class="create__container__img" src="../../img/login_2.png" img alt="login"/>
     <div class="create__container__ctn">
     <h2 class="create__container__ctn__title">Login</h2>
         <form action="includes/login.inc.php" method="post" >

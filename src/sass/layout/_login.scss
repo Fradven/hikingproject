@@ -40,7 +40,7 @@
     }
     &__img {
         width: 6rem;
-        height: 6rem;
+        height: auto;
         display: flex;
         margin: 0 auto;
     }
@@ -89,6 +89,7 @@
             color: $white-color;
             border-style: none;
             box-shadow: 5px 5px 5px $gray-color;
+            margin-bottom: 2rem;
         }
     }
 }
