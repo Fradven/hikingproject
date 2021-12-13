@@ -30,43 +30,81 @@
             margin: 0;
         
             .newhike {
+                a{
+                    text-decoration: none;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 200;
+                    font-size: 0.9rem;
+                    color: $white-color;
+                    }
                 background-color: $light-orange-color;
                 text-decoration: none;
-                padding: 0.6rem 0.8rem;
+                padding: 0.65rem 0.8rem;
                 border-radius: 1rem;
                 margin: 3rem 0.5rem 10rem 0.5rem;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 200;
                 font-size: 0.9rem;
                 color: $white-color;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
             }
 
+            .newhike:hover {
+                background: $dark-orange-color;
+                opacity: 0.9;
+                color: white;
+                box-shadow: 0.625em 0.625em 0.37em $brown-color;
+              }
             .newaccount {
-                background-color: $light-orange-color;
+                a{
                 text-decoration: none;
-                padding: 0.6rem 0.8rem;
-                border-radius: 1rem;
-                margin: 3rem 0.5rem 10rem 0.5rem;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 200;
                 font-size: 0.9rem;
                 color: $white-color;
+                }
+                background-color: $light-orange-color;
+                padding: 0.65rem 0.8rem;
+                border-radius: 1rem;
+                margin: 3rem 0.5rem 10rem 0.5rem;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
             }
+            .newaccount:hover {
+                background: $dark-orange-color;
+                opacity: 0.9;
+                color: white;
+                box-shadow: 0.625em 0.625em 0.37em $brown-color;
+              }
 
             .login {
                 img{
-                width: 2.3rem;
-                height: 2.3rem;
+                width: 2.5rem;
+                height: 2.5rem;
                 margin: 3rem 0.5rem 0 0.5rem;
+                margin: 3rem 0.5rem 0 0.5rem;
+                background-color: $light-orange-color;
+                border-radius: 5rem;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
                 }
             }
+            img:hover {
+                background: $dark-orange-color;
+                opacity: 0.9;
+                color: white;
+                box-shadow: 0.625em 0.625em 0.37em $brown-color;
+              }
             .logout {
                 img{
-                width: 2.3rem;
-                height: 2.3rem;
+                width: 2.5rem;
+                height: 2.5rem;
                 margin: 3rem 0.5rem 0 0.5rem;
+                filter: brightness(60%);
+                background-color: $light-orange-color;
+                border-radius: 5rem;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
                 }
             }
+            
 
         
     
@@ -86,6 +124,7 @@
         font-size: 0.6rem;
         color: $white-color;
         border-style: none;
+        box-shadow: 0.25em 0.25em 0.35em $brown-color;
         
         }
 
@@ -99,6 +138,7 @@
             font-size: 0.9rem;
             color: $black-color;
             border-style: none;
+            box-shadow: 0.25em 0.25em 0.35em $brown-color;
             }
 
     form {
@@ -111,7 +151,7 @@
             color: $beige-color;
             font-family: 'Raleway', sans-serif;
             font-size: 5rem;
-            letter-spacing: 1.3rem;
+            letter-spacing: 1.4rem;
             text-align: center;
             font-weight: 300;
             margin-top: 5rem;
@@ -129,7 +169,7 @@
         color: $beige-color;
         font-family: 'Raleway', sans-serif;
         font-size: 3.5rem;
-        letter-spacing: 1.3rem;
+        letter-spacing: 1rem;
         text-align: center;
         font-weight: 300;
         margin-top: 5rem;

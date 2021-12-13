@@ -3,7 +3,7 @@
   display: none;
   position: fixed;
   top: 2rem;
-  left: 2rem;
+  right: 5rem;
   z-index:1;
   @media (max-width: 1115px)
   {
@@ -14,7 +14,7 @@
   {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1rem;
     z-index:2;
     cursor: pointer;
     width: 40px;
@@ -29,7 +29,7 @@
     z-index:1;
     width: 25px;
     height: 25px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding:1rem;
     background: $light-orange-color;
     display: flex;
