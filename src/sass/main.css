@@ -331,20 +331,6 @@ table {
   }
 }
 
-.menuWrap {
-  display: none;
-  position: fixed;
-  top: 2rem;
-  right: 5rem;
-  z-index: 1;
-}
-
-@media (max-width: 1115px) {
-  .menuWrap {
-    display: block;
-  }
-}
-
 footer {
   background-color: #EEEBD0;
   padding: 5em 0em;
