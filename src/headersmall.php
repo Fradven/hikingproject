@@ -47,11 +47,11 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     </div>
 </div>
 
-<header class="header">
-<div class="header__container">
+<header class="headersmall">
+<div class="headersmall__container">
     
 <nav class="menu">
-    <ul class="header__container__logo">
+    <ul class="headersmall__container__logo">
     <img src="img/logo_hiking.png" alt="Hiking Project" href="index.php">
     </ul>
 

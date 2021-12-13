@@ -550,7 +550,7 @@ table {
   opacity: 1;
 }
 
-.header {
+.headersmall {
   margin: auto;
   height: 150px;
   position: relative;
@@ -559,12 +559,12 @@ table {
   background-position: bottom;
 }
 
-.header__container {
+.headersmall__container {
   position: relative;
   height: 100%;
 }
 
-.header__container .menu {
+.headersmall__container .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,18 +573,18 @@ table {
           justify-content: space-between;
 }
 
-.header__container__logo {
+.headersmall__container__logo {
   margin: 0;
   width: 25rem;
 }
 
-.header__container__logo img {
+.headersmall__container__logo img {
   width: 12rem;
   height: 12rem;
   padding-right: 2rem;
 }
 
-.header__container .top {
+.headersmall__container .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -594,7 +594,7 @@ table {
   margin: 0;
 }
 
-.header__container .top .newhike {
+.headersmall__container .top .newhike {
   background-color: #E17141;
   text-decoration: none;
   padding: 0.65rem 0.8rem;
@@ -608,7 +608,7 @@ table {
           box-shadow: 0.25em 0.25em 0.35em #4B2D20;
 }
 
-.header__container .top .newhike a {
+.headersmall__container .top .newhike a {
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
@@ -616,7 +616,7 @@ table {
   color: #fff;
 }
 
-.header__container .top .newhike:hover {
+.headersmall__container .top .newhike:hover {
   background: #D45721;
   opacity: 0.9;
   color: white;
@@ -624,7 +624,7 @@ table {
           box-shadow: 0.625em 0.625em 0.37em #4B2D20;
 }
 
-.header__container .top .newaccount {
+.headersmall__container .top .newaccount {
   background-color: #E17141;
   padding: 0.65rem 0.8rem;
   border-radius: 1rem;
@@ -633,7 +633,7 @@ table {
           box-shadow: 0.25em 0.25em 0.35em #4B2D20;
 }
 
-.header__container .top .newaccount a {
+.headersmall__container .top .newaccount a {
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
@@ -641,7 +641,7 @@ table {
   color: #fff;
 }
 
-.header__container .top .newaccount:hover {
+.headersmall__container .top .newaccount:hover {
   background: #D45721;
   opacity: 0.9;
   color: white;
@@ -649,7 +649,7 @@ table {
           box-shadow: 0.625em 0.625em 0.37em #4B2D20;
 }
 
-.header__container .top .login img {
+.headersmall__container .top .login img {
   width: 2.5rem;
   height: 2.5rem;
   margin: 3rem 0.5rem 0 0.5rem;
@@ -660,7 +660,7 @@ table {
           box-shadow: 0.25em 0.25em 0.35em #4B2D20;
 }
 
-.header__container .top img:hover {
+.headersmall__container .top img:hover {
   background: #D45721;
   opacity: 0.9;
   color: white;
@@ -668,7 +668,7 @@ table {
           box-shadow: 0.625em 0.625em 0.37em #4B2D20;
 }
 
-.header__container .top .logout img {
+.headersmall__container .top .logout img {
   width: 2.5rem;
   height: 2.5rem;
   margin: 3rem 0.5rem 0 0.5rem;
@@ -680,7 +680,7 @@ table {
           box-shadow: 0.25em 0.25em 0.35em #4B2D20;
 }
 
-.header__container .top .recherche {
+.headersmall__container .top .recherche {
   width: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,7 +692,7 @@ table {
   margin: 3rem 0rem 10rem 0rem;
 }
 
-.header__container .top .recherche [type="submit"] {
+.headersmall__container .top .recherche [type="submit"] {
   background-color: #fff;
   padding: 0.52rem 1rem;
   border-radius: 0 1rem 1rem 0;
@@ -705,7 +705,7 @@ table {
           box-shadow: 0.25em 0.25em 0.35em #4B2D20;
 }
 
-.header__container .top .recherche [type="search"] {
+.headersmall__container .top .recherche [type="search"] {
   background-color: #fff;
   padding: 0.5rem 0.8rem;
   border-radius: 1rem 0 0 1rem;
@@ -718,7 +718,7 @@ table {
           box-shadow: 0.25em 0.25em 0.35em #4B2D20;
 }
 
-.header__container .top .recherche form {
+.headersmall__container .top .recherche form {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -726,7 +726,7 @@ table {
 }
 
 @media (max-width: 1115px) {
-  .header .top {
+  .headersmall .top {
     display: none;
   }
 }
