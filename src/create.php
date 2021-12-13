@@ -1,5 +1,5 @@
 <?php
-    include_once 'header.php';
+    include_once 'headersmall.php';
 ?>
 <section class="create">
     <h2 class="create__title">Add a new trail</h2>
