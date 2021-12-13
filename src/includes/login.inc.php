@@ -1,16 +1,15 @@
 <?php
 
-    if (isset($_POST["login"])) {
+    if (isset($_POST["submit"])) {
         
         $name = $_POST["name"];
-        $email = $_POST["email"];
         $pwd = $_POST["pwd"];
 
         require_once 'dbh.inc.php';
         require_once 'function.inc.php';
 
         //check if all input a filled and filter all the inputed  ellement to see if they are clean
-        if (emptyInputSignup($name, $email, $pwd) !== false) {
+        if (emptyInputLogin($name, $pwd) !== false) {
             header("location: ../login.php?error=emptyinput");
             exit();
         }
@@ -25,16 +24,10 @@
             exit();
         }
 
-        //check if email is valid
-        if (filterdEmail($email) !== false){
-            header("location: ../login.php?error=invalidemail");
-            exit();
-        }
-
         //send input to the database
-        login($conn, $name, $email, $pwd);
+        login($conn, $name, $pwd);
 
     } else {
-        header("location:./index.php");
+        header("location:../login.php?error=invalidaccess");
         exit();
     }
