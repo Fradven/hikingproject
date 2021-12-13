@@ -1,46 +1,76 @@
 footer {
-    background-color: $beige-color;
-    padding: 5em 0em;
-  
-    .logo {
-      display: flex;
-      margin: 0 auto;
-      width: 12em;
-    }
-  
-    .menu {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: 2em auto 4em auto;
-      display: flex;
-      width: 350px;
-  
-      a {
-        font-family: "Barlow", sans-serif;
-        text-decoration: none;
-        color: blue;
-      }
-    }
-  
-    .socialmedia {
-      display: flex;
-      justify-content: space-around;
-      align-content: center;
-      align-items: center;
-      margin: 0 auto;
-      width: 20rem;
-      
-      img{
-          width: 3rem;
-      }
-    }
-    p {
-        font-family: 'Raleway', sans-serif;
-        color: $brown-color;
-        text-align: center;
-        font-weight: 200;
-        font-size: 0.9rem;
-        margin: 3rem;
+  background-color: $beige-color;
+  padding-bottom: 2rem;
+
+  .logo {
+    display: flex;
+    margin: 0 auto;
+    width: 12em;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 350px;
+
+    a {
+      font-family: "Barlow", sans-serif;
+      text-decoration: none;
+      color: blue;
     }
   }
+  .socialfollow{
+      font-family: 'Raleway', sans-serif;
+      color: $dark-orange-color;
+      text-align: center;
+      font-weight: 200;
+      font-size: 1.5rem;
+      margin: 1rem;
+    }
+  .socialmedia {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 20rem;
+    
+    img{
+        width: 3rem;
+    }
+  }
+  p {
+      font-family: 'Raleway', sans-serif;
+      color: $brown-color;
+      text-align: center;
+      font-weight: 200;
+      font-size: 0.9rem;
+      margin: 1rem;
+  }
+  .contactus{
+      font-family: 'Raleway', sans-serif;
+      color: $dark-orange-color;
+      text-align: center;
+      font-weight: 200;
+      font-size: 1.5rem;
+      margin: 1rem;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 55rem;
+    height: 2rem;
+      &__{
+          display: flex;
+          justify-content: center;
+          align-items: baseline;
+      }
+      &__img{
+          width: 1rem;
+      }
+  }
+}
