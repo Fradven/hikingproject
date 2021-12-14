@@ -58,4 +58,10 @@ try{
             }
         ?>
     </div>
+    <section class="pictures">
+        <img class="img" src="img/hiking1.jpg" alt="hiking1" />
+        <img class="img" src="img/hiking2.jpg" alt="hiking2" />
+        <img class="img" src="img/hiking3.jpg" alt="hiking3" />
+        <img class="img" src="img/hiking4.jpg" alt="hiking4" />
+      </section>
     </section>
