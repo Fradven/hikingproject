@@ -489,6 +489,7 @@ footer p {
   border-radius: 1rem;
   -webkit-box-shadow: 9px 9px 5px #9D8C78;
           box-shadow: 9px 9px 5px #9D8C78;
+  margin-top: 2rem;
 }
 
 .afficher_hikes .no_trails_found__txt {
