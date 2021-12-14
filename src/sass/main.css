@@ -334,7 +334,6 @@ table {
 
 footer {
   background-color: #EEEBD0;
-  padding-bottom: 2rem;
 }
 
 footer .logo {
@@ -342,7 +341,8 @@ footer .logo {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: 12em;
+  width: 5em;
+  padding: 2rem 0 1rem 0;
 }
 
 footer .menu {
@@ -370,7 +370,7 @@ footer .socialfollow {
   text-align: center;
   font-weight: 200;
   font-size: 1.5rem;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 footer .socialmedia {
@@ -389,7 +389,7 @@ footer .socialmedia {
 }
 
 footer .socialmedia img {
-  width: 3rem;
+  width: 2rem;
 }
 
 footer p {
@@ -398,7 +398,8 @@ footer p {
   text-align: center;
   font-weight: 200;
   font-size: 0.9rem;
-  margin: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 footer .contactus {
@@ -407,7 +408,6 @@ footer .contactus {
   text-align: center;
   font-weight: 200;
   font-size: 1.5rem;
-  margin: 1rem;
 }
 
 footer .contact {
@@ -422,22 +422,12 @@ footer .contact {
   margin: 0 auto;
   width: 55rem;
   height: 2rem;
-}
-
-footer .contact__ {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  position: relative;
 }
 
 footer .contact__img {
   width: 1rem;
+  margin-right: 0.5rem;
 }
 
 .menuWrap {
