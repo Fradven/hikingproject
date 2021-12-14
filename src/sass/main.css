@@ -1172,7 +1172,7 @@ footer .contact__img {
 }
 
 .create .error {
-  background-color: yellow;
+  background-color: #EEEBD0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1181,8 +1181,16 @@ footer .contact__img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 45rem;
-  height: 100%;
+  height: 5rem;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #E17141;
+  margin-top: 1rem;
+  -webkit-box-shadow: 5px 5px 5px #9D8C78;
+          box-shadow: 5px 5px 5px #9D8C78;
+  border-radius: 1rem;
 }
 
 .create {
