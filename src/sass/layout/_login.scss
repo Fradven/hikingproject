@@ -40,7 +40,7 @@
     }
     &__img {
         width: 6rem;
-        height: 6rem;
+        height: auto;
         display: flex;
         margin: 0 auto;
     }
@@ -89,7 +89,15 @@
             color: $white-color;
             border-style: none;
             box-shadow: 5px 5px 5px $gray-color;
+            margin-bottom: 2rem;
         }
+        &__button:hover {
+            background: $dark-orange-color;
+            opacity: 0.9;
+            color: white;
+            box-shadow: 0.625em 0.625em 0.37em $brown-color;
+          }
+
     }
 }
 }
