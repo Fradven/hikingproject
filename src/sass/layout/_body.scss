@@ -5,7 +5,7 @@
     height: auto;
     position: relative;
     flex-wrap: wrap;
-    padding: 2rem 0;
+    
 .card {
         width: 18rem;
         height: 27rem;
@@ -13,7 +13,7 @@
         background-image: url(../../img/cardbackground_3.jpg);
         background-size: cover;
         background-position: center;
-        margin: 1rem 2rem;
+        margin: 2rem 2rem;
         position: relative;
         border-radius: 1rem;
         box-shadow: 9px 9px 5px $gray-color;

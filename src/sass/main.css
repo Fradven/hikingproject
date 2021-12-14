@@ -846,7 +846,6 @@ footer .contact__img {
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 2rem 0;
 }
 
 .afficher_hikes .card {
@@ -856,7 +855,7 @@ footer .contact__img {
   background-image: url(../../img/cardbackground_3.jpg);
   background-size: cover;
   background-position: center;
-  margin: 1rem 2rem;
+  margin: 2rem 2rem;
   position: relative;
   border-radius: 1rem;
   -webkit-box-shadow: 9px 9px 5px #9D8C78;
