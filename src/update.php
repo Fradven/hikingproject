@@ -24,8 +24,11 @@
             <label for="travel">Distance: </label><br>
             <input type="text" id="travel" name="travel" value="<?php echo $hikes['distance']; ?>"><br>
             
-            <label for="duration">Duration: </label><br>
-            <input type="text" id="duration" name="duration"  value="<?php echo $hikes['duration']; ?>"><br>
+            <label for="duration" class="label">Duration : <br/></label>
+            <input type="number" name="durationhours" id="hours" value="<?php echo $hikes['hours']; ?>" min="0" style="width: 3rem;">
+            <span style="font-size:0.7em;">hours</span>
+            <input type="number" name="durationminutes" id="minutes" value="<?php echo $hikes['minutes']; ?>" min="0" max="59" style="width: 3rem;">
+            <span style="font-size:0.7em;">minutes</span></br>
             
             <label for="elevation">Elevation Gained: </label><br>
             <input type="text" id="elevation" name="elevation"  value="<?php echo $hikes['elevation_gain']; ?>"><br>
