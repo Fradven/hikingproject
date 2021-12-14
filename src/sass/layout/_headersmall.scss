@@ -1,0 +1,164 @@
+
+.headersmall {
+    margin: auto;
+    height: 150px;
+    position: relative;
+    background-image: url(../../img/background_smallheader.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    &__container {
+    position: relative;
+    height: 100%;
+    
+    
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        margin: 0;
+        width: 5rem;
+        height: auto;
+    img {
+        width: 7rem;
+        height: auto;
+        padding-right: 2rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }   
+}
+    
+    .top{
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        
+            .newhike {
+                a{
+                    text-decoration: none;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 200;
+                    font-size: 0.9rem;
+                    color: $white-color;
+                    }
+                background-color: $light-orange-color;
+                text-decoration: none;
+                padding: 0.65rem 0.8rem;
+                border-radius: 1rem;
+                margin: 3rem 0.5rem 10rem 0.5rem;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 200;
+                font-size: 0.9rem;
+                color: $white-color;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
+            }
+
+            .newhike:hover {
+                background: $dark-orange-color;
+                opacity: 0.9;
+                color: white;
+                box-shadow: 0.625em 0.625em 0.37em $brown-color;
+              }
+            .newaccount {
+                a{
+                text-decoration: none;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 200;
+                font-size: 0.9rem;
+                color: $white-color;
+                }
+                background-color: $light-orange-color;
+                padding: 0.65rem 0.8rem;
+                border-radius: 1rem;
+                margin: 3rem 0.5rem 10rem 0.5rem;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
+            }
+            .newaccount:hover {
+                background: $dark-orange-color;
+                opacity: 0.9;
+                color: white;
+                box-shadow: 0.625em 0.625em 0.37em $brown-color;
+              }
+
+            .login {
+                img{
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: 3rem 0.5rem 0 0.5rem;
+                margin: 3rem 0.5rem 0 0.5rem;
+                background-color: $light-orange-color;
+                border-radius: 5rem;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
+                }
+            }
+            img:hover {
+                background: $dark-orange-color;
+                opacity: 0.9;
+                color: white;
+                box-shadow: 0.625em 0.625em 0.37em $brown-color;
+              }
+            .logout {
+                img{
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: 3rem 0.5rem 0 0.5rem;
+                filter: brightness(60%);
+                background-color: $light-orange-color;
+                border-radius: 5rem;
+                box-shadow: 0.25em 0.25em 0.35em $brown-color;
+                }
+            }
+            
+
+        
+    
+    .recherche {
+        width: 15rem;
+        display: flex;
+        flex-direction: row;
+        margin: 3rem 0rem 10rem 0rem;
+
+
+        [type="submit"] {
+        background-color: $white-color;
+        padding: 0.52rem 1rem;
+        border-radius: 0 1rem 1rem 0;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        font-size: 0.6rem;
+        color: $white-color;
+        border-style: none;
+        box-shadow: 0.25em 0.25em 0.35em $brown-color;
+        
+        }
+
+
+        [type="search"] {
+            background-color: $white-color;
+            padding: 0.5rem 0.8rem;
+            border-radius: 1rem 0 0 1rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 200;
+            font-size: 0.9rem;
+            color: $black-color;
+            border-style: none;
+            box-shadow: 0.25em 0.25em 0.35em $brown-color;
+            }
+
+    form {
+        width: 100%;
+        display: flex;
+    }
+}
+}
+    }
+
+@media(max-width: 1115px)
+  {
+    .top
+    {
+      display: none;
+    }
+
+}
+}

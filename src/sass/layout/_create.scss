@@ -1,0 +1,132 @@
+.create {
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    height: auto;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    
+    &__container {
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+    height: 100%;
+    text-align: center;
+    margin: 1rem 1rem;
+    border-radius: 1rem;
+    background-image: url(../../img/background_login.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 10px 5px 5px $gray-color;
+    
+    &__title{
+        color: $dark-orange-color;
+            font-family: 'Raleway', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.6rem;
+            margin: 3rem auto 1.5rem auto;
+    }
+
+    .bordure{
+        border-bottom:2px solid $dark-orange-color;
+        width: 28rem;
+        display: flex;
+        margin: 0 auto 0 auto;;
+
+    }
+    &__img {
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        margin: 1.5rem auto;
+    }
+
+    &__ctn{
+
+        &__label{
+            color: $brown-color;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            text-align: center;
+            font-weight: 300;
+            margin: 1rem auto;
+        }
+
+        &__input{
+            text-decoration: none;
+            width: 20rem;
+            height: 2rem;
+            border-radius: 1rem;
+            border:none;
+            margin: 0.8rem;
+            box-shadow: 5px 5px 5px $gray-color;
+            padding-left: 1rem;
+            }
+
+            &__span{
+                color: $brown-color;
+                font-family: 'Raleway', sans-serif;
+                font-size: 1rem;
+                letter-spacing: 0.05rem;
+                text-align: center;
+                font-weight: 300;
+                margin: 1rem auto;
+            }
+        
+
+        &__difficulty{
+            color: $gray-color;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        &__button{
+            background-color: $light-orange-color;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 200;
+            font-size: 0.9rem;
+            color: $white-color;
+            border-style: none;
+            box-shadow: 5px 5px 5px $gray-color;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+        &__button:hover {
+            background: $dark-orange-color;
+            opacity: 0.9;
+            color: white;
+            box-shadow: 0.625em 0.625em 0.37em $brown-color;
+          }
+
+    }
+}
+
+}
+.error{
+    background-color: $brown-color;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 45rem;
+    height: 3.5rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: $beige-color;
+    box-shadow: 5px 5px 5px $gray-color;
+    border-radius: 1rem;
+    padding-top: 2rem;
+    opacity: 0.75;
+    
+}

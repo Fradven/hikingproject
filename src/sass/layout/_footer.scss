@@ -1,0 +1,79 @@
+footer {
+  background-color: $beige-color;
+
+  .logo {
+    display: flex;
+    margin: 0 auto;
+    width: 5em;
+    padding: 2rem 0 1rem 0;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 350px;
+
+    a {
+      font-family: "Barlow", sans-serif;
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  .socialfollow{
+      font-family: 'Raleway', sans-serif;
+      color: $dark-orange-color;
+      text-align: center;
+      font-weight: 200;
+      font-size: 1.5rem;
+      margin: 0.5rem;
+    }
+  .socialmedia {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 20rem;
+    
+    img{
+        width: 2rem;
+    }
+  }
+  p {
+      font-family: 'Raleway', sans-serif;
+      color: $brown-color;
+      text-align: center;
+      font-weight: 200;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+  }
+  .contactus{
+      font-family: 'Raleway', sans-serif;
+      color: $dark-orange-color;
+      text-align: center;
+      font-weight: 200;
+      font-size: 1.5rem;
+  
+  }
+  .contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 550px;
+    position: relative;
+      &__img{
+          width: 1rem;
+          margin-right: 0.5rem;
+      }
+  
+  @media(max-width: 1115px)
+  {
+    flex-direction: column;
+    width: 200px;
+  }
+}
+}
