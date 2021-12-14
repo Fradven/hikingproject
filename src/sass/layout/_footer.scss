@@ -1,11 +1,11 @@
 footer {
     background-color: $beige-color;
-    padding-bottom: 2rem;
   
     .logo {
       display: flex;
       margin: 0 auto;
-      width: 12em;
+      width: 5em;
+      padding: 2rem 0 1rem 0;
     }
   
     .menu {
@@ -27,7 +27,7 @@ footer {
         text-align: center;
         font-weight: 200;
         font-size: 1.5rem;
-        margin: 1rem;
+        margin: 0.5rem;
       }
     .socialmedia {
       display: flex;
@@ -47,7 +47,8 @@ footer {
         text-align: center;
         font-weight: 200;
         font-size: 0.9rem;
-        margin: 1rem;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
     }
     .contactus{
         font-family: 'Raleway', sans-serif;
@@ -55,7 +56,6 @@ footer {
         text-align: center;
         font-weight: 200;
         font-size: 1.5rem;
-        margin: 1rem;
     }
     .contact {
       display: flex;
@@ -64,13 +64,9 @@ footer {
       margin: 0 auto;
       width: 55rem;
       height: 2rem;
-        &__{
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-        }
         &__img{
             width: 1rem;
+            margin-right: 0.5rem;
         }
     }
   }
