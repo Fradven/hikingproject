@@ -1,11 +1,11 @@
 <?php
-    include_once 'header.php';
+    include_once 'headersmall.php';
 ?>
 <section class="create">
 <div class="create__container">
     <h2 class="create__container__title">Welcome</h2>
     <div class="bordure"></div>
-    <img class="create__container__img" src="../../img/login.png" img alt="login"/>
+    <img class="create__container__img" src="../../img/login_2.png" img alt="login"/>
     <div class="create__container__ctn">
     <h2 class="create__container__ctn__title">Sign up</h2>
         <form action="includes/signup.inc.php" method="post" >
@@ -25,4 +25,30 @@
 
         </form>
     </div>
+
+    <?php if (isset($_GET["error"])){
+        if ($_GET["error"] == "emptyinput") {
+            echo "<p class='error'>One or all the input fields are empty!</p>";
+        }
+        elseif ($_GET['error'] == "invalidusername") {
+            echo "<p class='error'>Unauthorized character detected in the username field!</p>";
+        }
+        elseif ($_GET['error'] == "invalidpwd") {
+            echo "<p class='error'>Unauthorized character detected in the password field!</p>";
+        }
+        elseif ($_GET['error'] == "pwddontmatch") {
+            echo "<p class='error'>Passwords don't match!</p>";
+        }
+        elseif ($_GET['error'] == "invalidemail") {
+            echo "<p class='error'>Email already in use!</p>";
+        }
+        elseif ($_GET['error'] == "usernametaken") {
+            echo "<p class='error'>WUsername taken!</p>";
+        }
+    }
+    ?>
 </section>
+<footer>
+<?php 
+include_once 'footer.php';
+?>
