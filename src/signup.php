@@ -25,7 +25,7 @@
 
         </form>
     </div>
-
+</div>
     <?php if (isset($_GET["error"])){
         if ($_GET["error"] == "emptyinput") {
             echo "<p class='error'>One or all the input fields are empty!</p>";
@@ -43,7 +43,7 @@
             echo "<p class='error'>Email already in use!</p>";
         }
         elseif ($_GET['error'] == "usernametaken") {
-            echo "<p class='error'>WUsername taken!</p>";
+            echo "<p class='error'>Username taken!</p>";
         }
     }
     ?>

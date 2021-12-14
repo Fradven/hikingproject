@@ -74,7 +74,7 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     
     <li class="newaccount">
     <?php echo 
-    '<a href="singup.php">New account</a>' 
+    '<a href="signup.php">New account</a>' 
     ?>
     </li>
 <li class="login">
