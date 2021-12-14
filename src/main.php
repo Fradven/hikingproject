@@ -11,48 +11,51 @@ try{
 
 
     <section class="afficher_hikes">
-        <div class="container">
         <?php
             if($allhikes->rowCount() > 0){
                 while($hikes = $allhikes->fetch()){
                     ?>
                 <div class="card">
         <h2 class="card__name"><?= $hikes['name']?></h2>
-                </div>
+
+        <div class="card__bordure"></div>
+                
         <div class="card__difficulty">
-          <p>Level - <?= $hikes['difficulty']?></p>
+            <p class="card__difficulty__theme">Difficulty</p>
+          <p><?= $hikes['difficulty']?></p>
         </div>
 
         <div class="card__distance">
-          <p>Distance - <?= $hikes['distance']?> km</p>
+        <p class="card__distance__theme">Distance</p>
+          <p><?= $hikes['distance']?> km</p>
         </div>
 
         <div class="card__duration">
-          <p>Duration - <?= $hikes['duration']?></p>
+        <p class="card__duration__theme">Duration</p>
+          <p><?= $hikes['duration']?></p>
         </div>
 
         <div class="card__elevation">
-          <p>Elevation - <?= $hikes['elevation_gain']?> m</p>
+        <p class="card__elevation__theme">Elevation</p>
+          <p><?= $hikes['elevation_gain']?> m</p>
         </div>
       
         <div class="card__ctn-btn">
           <form method="post" action="delete.php?id='.$hike['id'].'">
           <input type="submit" class="card__btn delete" value="DELETE"> 
           </form>
-
-          <?php echo 
-            '<button class="card__btn modify"><a href="update.php?id='.$hikes['id'].'">Edit</a></button>' 
-          ?>
-          
+          <button class="card__btn modify"><a href=php/update.php?id='.$hike['id'].'>EDIT</a></button>
         </div>
       </div>
                     <?php
                 }
             }else{
                 ?>
-                <p>No trails found</p>
+                <div class="no_trails_found">
+                <p class="no_trails_found__txt">You're lost ? <br><span>No trails found...</span></p>
+                </div>
                 <?php
             }
         ?>
-        </div>
+    </div>
     </section>

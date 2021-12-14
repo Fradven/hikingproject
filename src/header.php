@@ -1,5 +1,4 @@
 <?php
-session_start();
 include ('./includes/dbh.inc.php');
 $allhikes = $conn->query('SELECT * FROM hikes ORDER BY id DESC');
 if(isset($_GET['s']) AND !empty($_GET['s'])){
@@ -19,14 +18,11 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
 </head>
 <body>
 
-<header class="header">
-<div class="header__container">
-    
-<div class="menu">
-    <div class="header__container__logo">
-    <a href="index.php">
-        <img src="img/logo_hiking.png" alt="Hiking Project">
-</a>
+<!-- MENU HAMBURGER -->
+<div class="menuWrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+        <div></div>
     </div>
     <div class="menu">
         <div>
@@ -41,8 +37,8 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
 </li>
                 <ul>
                     <li><a href="create.php">Add a new Hike</a></li>
-                    <li><a href="create.php">New account</a></li>
-                    <li><a href="create.php">Login</a></li>
+                    <li><a href="singup.php">New account</a></li>
+                    <li><a href="login.php">Login</a></li>
                     <li><a href="create.php">Logout</a></li>
                     </ul>
                 
@@ -71,7 +67,7 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
 </li>
         <li class="newhike">
     <?php echo 
-    '<a class="newhike" href="signup.php">New account</a>' 
+    '<a href="create.php">Add a new Hike</a>' 
     ?>
         </li>
 
@@ -95,4 +91,3 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     </div> 
 
 </div>
- 
