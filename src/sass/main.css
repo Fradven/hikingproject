@@ -569,7 +569,7 @@ footer p {
 
 .create__container__img {
   width: 6rem;
-  height: 6rem;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -620,5 +620,13 @@ footer p {
   -webkit-box-shadow: 5px 5px 5px #9D8C78;
           box-shadow: 5px 5px 5px #9D8C78;
   margin: 1.3rem 0;
+}
+
+.create__container__ctn__button:hover {
+  background: #D45721;
+  opacity: 0.9;
+  color: white;
+  -webkit-box-shadow: 0.625em 0.625em 0.37em #4B2D20;
+          box-shadow: 0.625em 0.625em 0.37em #4B2D20;
 }
 /*# sourceMappingURL=main.css.map */
