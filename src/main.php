@@ -46,7 +46,12 @@ try{
           </form>
           <button class="card__btn modify"><a href="update.php?id=<?= $hikes['id']?>">EDIT</a></button>
         </div>
+        
+        <div class="card__createtime">
+          <p><?= $hikes['createAt'] ?></p>
+        </div>
       </div>
+
                     <?php
                 }
             }else{
