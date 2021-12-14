@@ -1,5 +1,5 @@
 <?php
-    require_once "header.php";
+    require_once "headersmall.php";
     require_once('./includes/dbh.inc.php');
     $id = $_GET["id"];
     try {
