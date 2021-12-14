@@ -4,14 +4,15 @@
         
         $name = $_POST["name"];
         $travel = $_POST["travel"];
-        $duration = $_POST["duration"];
+        $durationhours = $_POST["durationhours"];
+        $durationminutes = $_POST["durationminutes"];
         $elevation = $_POST["elevation"]; 
         $difficulty = $_POST["difficulty"]; 
 
         require_once 'dbh.inc.php';
         require_once 'function.inc.php';
 
-        if (emptyInputCreat($name, $difficulty, $travel, $duration, $elevation) !== false) {
+        if (emptyInputCreat($name, $difficulty, $travel, $durationhours, $durationminutes, $elevation) !== false) {
             header("location: ../create.php?error=emptyinput");
             exit();
         }
@@ -26,12 +27,17 @@
             exit();
         }
 
-        if ($duration !== filterdDuration($duration)){
+        if (filterdInt($durationhours) !== false){
             header("location: ../create.php?error=invalidduration");
             exit();
         }
 
-        if (filterdDistance($elevation) !== false){
+        if (filterdInt($durationminutes) !== false){
+            header("location: ../create.php?error=invalidduration");
+            exit();
+        }
+
+        if (filterdInt($elevation) !== false){
             header("location: ../create.php?error=invalidelevation");
             exit();
         }
@@ -41,7 +47,7 @@
             exit();
         } */
 
-        createUser($conn, $name, $difficulty, $travel, $duration, $elevation);
+        createHike($conn, $name, $difficulty, $travel, $durationhours, $durationminutes, $elevation);
 
     } else {
         header("location:./index.php?error=invalidpath");

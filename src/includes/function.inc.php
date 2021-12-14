@@ -1,8 +1,8 @@
 <?php
     //check for empty form in create
-    function emptyInputCreat($name, $travel, $duration, $elevation, $difficulty) {
+    function emptyInputCreat($name, $travel, $durationhours, $durationminutes, $elevation, $difficulty) {
         $result;
-        if (empty($name)  || empty($travel)  || empty($duration)  || empty($elevation)  || empty($difficulty)) {
+        if (empty($name)  || empty($travel)  || empty($durationhours)  || empty($durationminutes)  || empty($elevation)  || empty($difficulty)) {
             $result = true;
         } else {
             $result = false;
@@ -77,24 +77,9 @@
         return $result;
     }
 
-    function filterdDuration($duration) {
-        $newstr = filter_var($duration, FILTER_SANITIZE_STRING);
-        return $newstr;
-    }
-
-    function filterdElevation($elevation) {
+    function filterdInt($int) {
         $result;
-        if(!$newInt = filter_var($elevation, FILTER_VALIDATE_INT)){
-            $result = true;
-        } else {
-            $result = false;
-        }
-        return $result;
-    }
-    //check if the name has been inputed had valid character
-    function invalidName($name) {
-        $result;
-        if (!preg_match("/^[a-zA-Z0-9._-]$/", $name)) {
+        if(!$newInt = filter_var($int, FILTER_VALIDATE_INT)){
             $result = true;
         } else {
             $result = false;
@@ -139,24 +124,25 @@
     }
 
     //Input data from the create page to the database
-    function createUser($conn, $name, $difficulty, $travel, $duration, $elevation) {
+    function createHike($conn, $name, $difficulty, $travel, $durationhours, $durationminutes, $elevation) {
         try {
 
             $sql = $conn->prepare(
-                "INSERT INTO hikes (name, difficulty, distance, duration, elevation_gain) 
-                VALUES (:name, :difficulty, :distance, :duration, :elevation_gain)");
+                "INSERT INTO hikes (name, difficulty, distance, hours, minutes, elevation_gain) 
+                VALUES (:name, :difficulty, :distance, :hours, :minutes, :elevation_gain)");
 
             $sql->bindParam(':name', $name, PDO::PARAM_STR, 55);
             $sql->bindParam(':difficulty', $difficulty, PDO::PARAM_STR, 11);
-            $sql->bindParam(':distance', $travel, PDO::PARAM_STR, 50);
-            $sql->bindParam(':duration', $duration, PDO::PARAM_STR, 50);
+            $sql->bindParam(':distance', $travel, PDO::PARAM_STR);
+            $sql->bindParam(':hours', $durationhours, PDO::PARAM_INT);
+            $sql->bindParam(':minutes', $durationminutes, PDO::PARAM_INT);
             $sql->bindParam(':elevation_gain', $elevation, PDO::PARAM_INT);
             $sql->execute();
 
             header("location: ../create.php?success");
             exit();
         } catch(PDOException $e) {
-            header("location: ../create.php?error=invalid");
+            echo $e->getMessage();
             exit();
         }
 
@@ -165,7 +151,7 @@
     
         
     //Update data in the database
-    function updateHike($conn, $id, $name, $difficulty, $travel, $duration, $elevation) {
+    function updateHike($conn, $id, $name, $difficulty, $travel, $durationhours, $durationminutes, $elevation) {
         try {
 
             $sql = $conn->prepare(
@@ -173,16 +159,19 @@
             SET name = :name,
             difficulty = :difficulty,
             distance = :distance,
-            duration = :duration,
+            hours = :hours,
+            minutes = :minutes,
             elevation_gain = :elevation_gain
             WHERE id = :id");
 
             $sql->bindParam(':name', $name, PDO::PARAM_STR, 55);
             $sql->bindParam(':difficulty', $difficulty, PDO::PARAM_STR, 11);
-            $sql->bindParam(':distance', $travel, PDO::PARAM_STR, 50);
-            $sql->bindParam(':duration', $duration, PDO::PARAM_STR, 50);
+            $sql->bindParam(':distance', $travel, PDO::PARAM_STR);
+            $sql->bindParam(':hours', $durationhours, PDO::PARAM_INT);
+            $sql->bindParam(':minutes', $durationminutes, PDO::PARAM_INT);
             $sql->bindParam(':elevation_gain', $elevation, PDO::PARAM_INT);
             $sql->bindParam(':id', $id, PDO::PARAM_INT);
+
             $sql->execute();
             
             header("location: ../index.php?success");
