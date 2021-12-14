@@ -101,19 +101,21 @@
     }
 }
 .error{
-    background-color: $beige-color;
+    background-color: $brown-color;
     display: flex;
     flex-direction: column;
+    margin: 1rem 1rem;
     width: 45rem;
-    height: 5rem;
+    height: 3.5rem;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 1.1rem;
-    color: $light-orange-color;
-    margin-top: 1rem;
+    color: $beige-color;
     box-shadow: 5px 5px 5px $gray-color;
     border-radius: 1rem;
+    padding-top: 2rem;
+    opacity: 0.75;
     
 }
 }
