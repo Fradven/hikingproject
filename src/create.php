@@ -34,4 +34,27 @@
             <button class="create__container__ctn__button" type="submit" value="submit" name="submit">Submit</button>
         </form>
     </div>
+
+    <?php if (isset($_GET["error"])){
+        if ($_GET["error"] == "emptyinput") {
+            echo "<p class='error'>One or all the input fields are empty!</p>";
+        }
+        elseif ($_GET['error'] == "invalidname") {
+            echo "<p class='error'>Unauthorized character detected in the name field!</p>";
+        }
+        elseif ($_GET['error'] == "invalidDistance") {
+            echo "<p class='error'>Unauthorized character detected in the distance field!</p>";
+        }
+        elseif ($_GET['error'] == "invalidduration") {
+            echo "<p class='error'>Unauthorized character detected in the duration field!</p>";
+        }
+        elseif ($_GET['error'] == "invalidelevation") {
+            echo "<p class='error'>Unauthorized character detected in the elevation field!</p>";
+        }
+        elseif ($_GET['error'] == "invalidpath") {
+            echo "<p class='error'>Entered the page through an unauthorized path!</p>";
+        }
+    }
+    ?>
+
 </section>
