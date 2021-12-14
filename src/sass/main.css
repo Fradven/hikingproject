@@ -431,32 +431,54 @@ footer p {
 }
 
 .afficher_hikes .card__ctn-btn .delete {
-  background-color: #E17141;
   text-decoration: none;
-  padding: 0.6rem 0.8rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 0.7rem;
   font-family: 'Raleway', sans-serif;
-  font-weight: 200;
+  font-weight: 500;
   font-size: 0.9rem;
-  color: #fff;
+  color: #D45721;
+  background-color: transparent;
   text-align: center;
+  border: solid 2px #E17141;
+  -webkit-box-shadow: 5px 5px 5px #9D8C78;
+          box-shadow: 5px 5px 5px #9D8C78;
+  letter-spacing: 0.1rem;
+}
+
+.afficher_hikes .card__ctn-btn .delete:hover {
+  background: #D45721;
+  opacity: 0.9;
+  color: white;
+  -webkit-box-shadow: 0.625em 0.625em 0.37em #4B2D20;
+          box-shadow: 0.625em 0.625em 0.37em #4B2D20;
+}
+
+.afficher_hikes .card__ctn-btn .modify {
+  background-color: #E17141;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.7rem;
   border: none;
   -webkit-box-shadow: 5px 5px 5px #9D8C78;
           box-shadow: 5px 5px 5px #9D8C78;
 }
 
-.afficher_hikes .card__ctn-btn .modify {
-  background-color: #D45721;
-  padding: 0.6rem 0.8rem;
-  border-radius: 0.7rem;
+.afficher_hikes .card__ctn-btn .modify a {
+  text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
   font-size: 0.9rem;
   color: #fff;
   text-align: center;
-  border: none;
-  -webkit-box-shadow: 5px 5px 5px #9D8C78;
-          box-shadow: 5px 5px 5px #9D8C78;
+  letter-spacing: 0.2rem;
+}
+
+.afficher_hikes .card__ctn-btn .modify:hover {
+  background: #D45721;
+  opacity: 0.9;
+  color: white;
+  -webkit-box-shadow: 0.625em 0.625em 0.37em #4B2D20;
+          box-shadow: 0.625em 0.625em 0.37em #4B2D20;
 }
 
 .afficher_hikes .no_trails_found {
