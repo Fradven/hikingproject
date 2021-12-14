@@ -32,7 +32,7 @@ try{
 
         <div class="card__duration">
         <p class="card__duration__theme">Duration</p>
-          <p><?= $hikes['duration']?></p>
+          <p><?= $hikes['hours']?>h<?= $hikes['minutes']?></p>
         </div>
 
         <div class="card__elevation">
@@ -41,10 +41,10 @@ try{
         </div>
       
         <div class="card__ctn-btn">
-          <form method="post" action="delete.php?id='.$hike['id'].'">
+          <form method="post" action="delete.php?id=<?= $hikes['id']?>">
           <input type="submit" class="card__btn delete" value="DELETE"> 
           </form>
-          <button class="card__btn modify"><a href=php/update.php?id='.$hike['id'].'>EDIT</a></button>
+          <button class="card__btn modify"><a href="update.php?id=<?= $hikes['id']?>">EDIT</a></button>
         </div>
       </div>
                     <?php
