@@ -37,8 +37,8 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
 </li>
                 <ul>
                     <li><a href="create.php">Add a new Hike</a></li>
-                    <li><a href="create.php">New account</a></li>
-                    <li><a href="create.php">Login</a></li>
+                    <li><a href="signup.php">New account</a></li>
+                    <li><a href="login.php">Login</a></li>
                     <li><a href="create.php">Logout</a></li>
                     </ul>
                 
@@ -52,7 +52,9 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     
 <nav class="menu">
     <ul class="header__container__logo">
-    <img src="img/logo_hiking.png" alt="Hiking Project" href="index.php">
+    <a href="index.php">
+        <img src="img/logo_hiking.png" alt="Hiking Project">
+    </a>
     </ul>
 
     <ul class="top">
