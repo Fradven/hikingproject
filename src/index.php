@@ -1,5 +1,11 @@
 <?php 
   include('./includes/dbh.inc.php');
   include('header.php');
-  include('main.php');
+  if (isset ($_SESSION ["userId"])) {
+    include('main.php');
+  }
+  else {
+    include('signup.php');
+  }
+  
   include('footer.php');

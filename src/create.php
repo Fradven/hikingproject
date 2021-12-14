@@ -15,11 +15,11 @@
             <label class="create__container__ctn__label" for="travel">Distance: </label><br>
             <input class="create__container__ctn__input" type="text" id="travel" name="travel" placeholder="In kilometers..."><br>
             
-            <label for="duration" class="label">Duration : <br/></label>
+            <label class="create__container__ctn__label" for="duration" class="label">Duration : <br/></label>
             <input class="create__container__ctn__input" type="number" name="durationhours" id="hours" min="0" style="width: 3rem;">
-            <span style="font-size:0.7em;">hours</span>
+            <span class="create__container__ctn__span" style="font-size:0.7em;">hours</span>
             <input class="create__container__ctn__input" type="number" name="durationminutes" id="minutes" min="0" max="59" style="width: 3rem;">
-            <span style="font-size:0.7em;">minutes</span></br>
+            <span class="create__container__ctn__span" style="font-size:0.7em;">minutes</span></br>
             
             <label class="create__container__ctn__label" for="elevation">Elevation Gained: </label><br>
             <input class="create__container__ctn__input" type="number" id="elevation" name="elevation"  placeholder="In meters..."><br>
@@ -31,13 +31,13 @@
             <input type="radio" id="medium" name="difficulty" value="medium">
             <label class="create__container__ctn__difficulty" for="medium">Medium</label><br>
 
-            <input type="radio" id="easy" name="difficulty" value="easy">
+            <input checked type="radio" id="easy" name="difficulty" value="easy">
             <label class="create__container__ctn__difficulty" for="easy">Easy</label></br>
 
             <button class="create__container__ctn__button" type="submit" value="submit" name="submit">Submit</button>
         </form>
     </div>
-
+    </section>
     <?php if (isset($_GET["error"])){
         if ($_GET["error"] == "emptyinput") {
             echo "<p class='error'>One or all the input fields are empty!</p>";
@@ -60,7 +60,7 @@
     }
     ?>
 
-</section>
+
 <footer>
 <?php 
 include_once 'footer.php';

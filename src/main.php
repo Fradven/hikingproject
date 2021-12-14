@@ -39,6 +39,10 @@ try{
         <p class="card__elevation__theme">Elevation</p>
           <p><?= $hikes['elevation_gain']?> m</p>
         </div>
+
+        <div class="card__createtime">
+          <p><?= $hikes['createAt'] ?></p>
+        </div>
       
         <div class="card__ctn-btn">
           <form method="post" action="delete.php?id=<?= $hikes['id']?>">
@@ -47,9 +51,7 @@ try{
           <button class="card__btn modify"><a href="update.php?id=<?= $hikes['id']?>">EDIT</a></button>
         </div>
         
-        <div class="card__createtime">
-          <p><?= $hikes['createAt'] ?></p>
-        </div>
+    
       </div>
 
                     <?php

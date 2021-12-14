@@ -1,6 +1,3 @@
-<?php
-    include_once 'headersmall.php';
-?>
 <section class="create">
 <div class="create__container">
     <h2 class="create__container__title">Welcome</h2>
@@ -48,7 +45,3 @@
     }
     ?>
 </section>
-<footer>
-<?php 
-include_once 'footer.php';
-?>

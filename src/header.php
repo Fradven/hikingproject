@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ('./includes/dbh.inc.php');
 $allhikes = $conn->query('SELECT * FROM hikes ORDER BY id DESC');
 if(isset($_GET['s']) AND !empty($_GET['s'])){
@@ -67,29 +68,28 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
         <input type="submit" name="Send" value ="🔎"></div>
     </form>
 </li>
-        <li class="newhike">
-    <?php echo 
-    '<a href="create.php">Add a new Hike</a>' 
-    ?>
+    <?php
+    if (isset ($_SESSION ["userId"])) {
+        echo
+        
+        '<li class="newhike"> 
+        <a href="create.php">Add a new Hike</a>
         </li>
-
-    
-    <li class="newaccount">
-    <?php echo 
-    '<a href="signup.php">New account</a>' 
+        <li class="logout">
+        <a href="./includes/logout.inc.php">
+            <img src="img/login.png" alt="login">
+        </a>
+    </li>';
+      }
+      else {
+        echo
+        '<li class="login">
+        <a href="login.php">
+            <img src="img/login.png" alt="login">
+        </a>
+    </li>';
+      }
     ?>
-    </li>
-<li class="login">
-        <a href="login.php">
-            <img src="img/login.png" alt="login">
-        </a>
-    </li>
-    </li>
-<li class="logout">
-        <a href="login.php">
-            <img src="img/login.png" alt="login">
-        </a>
-    </li>
 
     </ul>
 </nav>

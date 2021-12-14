@@ -63,13 +63,17 @@ footer {
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    width: 55rem;
-    height: 2rem;
+    width: 550px;
     position: relative;
       &__img{
           width: 1rem;
           margin-right: 0.5rem;
       }
+  
+  @media(max-width: 1115px)
+  {
+    flex-direction: column;
+    width: 200px;
   }
-
+}
 }

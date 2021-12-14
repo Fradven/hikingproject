@@ -7,7 +7,7 @@
     flex-wrap: wrap;
 .card {
         width: 18rem;
-        height: 27rem;
+        height: 30rem;
         text-align: center;
         background-image: url(../../img/cardbackground_3.jpg);
         background-size: cover;
@@ -186,5 +186,13 @@
           height: auto;
         }
       }
+    .card__createtime{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: $dark-orange-color;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    }
 
 }
