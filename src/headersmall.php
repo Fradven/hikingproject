@@ -52,7 +52,7 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     
 <nav class="menu">
     <ul class="headersmall__container__logo">
-    <img src="img/logo_hiking.png" alt="Hiking Project" href="index.php">
+    <img src="img/logo_hiking.png" alt="Hiking Project" href="main.php">
     </ul>
 
     <ul class="top">
@@ -74,7 +74,7 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     
     <li class="newaccount">
     <?php echo 
-    '<a href="login.php">New account</a>' 
+    '<a href="singup.php">New account</a>' 
     ?>
     </li>
 <li class="login">
