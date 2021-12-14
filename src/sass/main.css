@@ -300,7 +300,7 @@ footer .socialmedia {
 }
 
 footer .socialmedia img {
-  width: 3rem;
+  width: 2rem;
 }
 
 footer p {
@@ -333,6 +333,7 @@ footer .contact {
   margin: 0 auto;
   width: 55rem;
   height: 2rem;
+  position: relative;
 }
 
 footer .contact__img {
