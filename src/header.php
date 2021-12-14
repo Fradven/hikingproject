@@ -37,8 +37,8 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
 </li>
                 <ul>
                     <li><a href="create.php">Add a new Hike</a></li>
-                    <li><a href="singup.php">New account</a></li>
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="create.php">New account</a></li>
+                    <li><a href="create.php">Login</a></li>
                     <li><a href="create.php">Logout</a></li>
                     </ul>
                 
@@ -71,7 +71,13 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     ?>
         </li>
 
-<div class="login">
+    
+    <li class="newaccount">
+    <?php echo 
+    '<a href="login.php">New account</a>' 
+    ?>
+    </li>
+<li class="login">
         <a href="login.php">
             <img src="img/login.png" alt="login">
         </a>
@@ -91,3 +97,4 @@ if(isset($_GET['s']) AND !empty($_GET['s'])){
     </div> 
 
 </div>
+ 
