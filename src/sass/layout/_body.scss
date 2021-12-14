@@ -160,6 +160,14 @@
     }
     }
     }
-
+    .pictures {
+        display: flex;
+        margin-top: 2rem;
+      
+        img {
+          width: 25%;
+          height: auto;
+        }
+      }
 
 }
