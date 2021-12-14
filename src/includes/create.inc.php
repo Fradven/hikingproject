@@ -42,11 +42,6 @@
             exit();
         }
 
-        /* if (invalidTravel($travel) !== false){
-            header("location: ../create.php?error=invalidname");
-            exit();
-        } */
-
         createHike($conn, $name, $difficulty, $travel, $durationhours, $durationminutes, $elevation);
 
     } else {
