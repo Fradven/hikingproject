@@ -33,7 +33,7 @@
         }
 
         if (filterdDistance($elevation) !== false){
-            header("location: ../index.php?error=invalidDistance");
+            header("location: ../index.php?error=invalidelevation");
             exit();
         }
 
@@ -45,6 +45,6 @@
         updateHike($conn, $id, $name, $difficulty, $travel, $duration, $elevation);
 
     } else {
-        header("location:./index.php");
+        header("location:./index.php?error=invalidpath");
         exit();
     }
