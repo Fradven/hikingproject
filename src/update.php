@@ -13,39 +13,41 @@
     }   
 ?>
 <section class="create">
-    <h2 class="create__title">Edit the trail</h2>
-
-    <div class="create__ctn">
+<div class="create__container">
+    <h2 class="create__container__title">Edit the trail</h2>
+    <div class="bordure"></div>
+    <img class="create__container__img" src="../../img/addhiking.png" img alt="login"/>
+    <div class="create__container__ctn">
 
         <form action="includes/update.inc.php" method="post" >
-            <label for="name">Name of the trail: </label><br>
-            <input type="text" id="name" name="name" value="<?php echo $hikes['name']; ?>"><br>
+            <label class="create__container__ctn__label" for="name">Name of the trail: </label><br>
+            <input class="create__container__ctn__input" type="text" id="name" name="name" value="<?php echo $hikes['name']; ?>"><br>
             
-            <label for="travel">Distance: </label><br>
-            <input type="text" id="travel" name="travel" value="<?php echo $hikes['distance']; ?>"><br>
+            <label class="create__container__ctn__label" for="travel">Distance: </label><br>
+            <input class="create__container__ctn__input" type="text" id="travel" name="travel" value="<?php echo $hikes['distance']; ?>"><br>
             
-            <label for="duration" class="label">Duration : <br/></label>
-            <input type="number" name="durationhours" id="hours" value="<?php echo $hikes['hours']; ?>" min="0" style="width: 3rem;">
+            <label class="create__container__ctn__label" for="duration" class="label">Duration : <br/></label>
+            <input class="create__container__ctn__input" type="number" name="durationhours" id="hours" value="<?php echo $hikes['hours']; ?>" min="0" style="width: 3rem;">
             <span style="font-size:0.7em;">hours</span>
-            <input type="number" name="durationminutes" id="minutes" value="<?php echo $hikes['minutes']; ?>" min="0" max="59" style="width: 3rem;">
+            <input class="create__container__ctn__input" type="number" name="durationminutes" id="minutes" value="<?php echo $hikes['minutes']; ?>" min="0" max="59" style="width: 3rem;">
             <span style="font-size:0.7em;">minutes</span></br>
             
-            <label for="elevation">Elevation Gained: </label><br>
-            <input type="text" id="elevation" name="elevation"  value="<?php echo $hikes['elevation_gain']; ?>"><br>
+            <label class="create__container__ctn__label" for="elevation">Elevation Gained: </label><br>
+            <input class="create__container__ctn__input" type="text" id="elevation" name="elevation"  value="<?php echo $hikes['elevation_gain']; ?>"><br>
 
-            <label for="difficulty"> Difficulty: </label></br>
+            <label class="create__container__ctn__label" for="difficulty"> Difficulty: </label></br>
             <input type="radio" id="hard" name="difficulty" value="hard">
-            <label for="hard">Hard</label><br>
+            <label class="create__container__ctn__difficulty" for="hard">Hard</label><br>
 
             <input type="radio" id="medium" name="difficulty" value="medium">
-            <label for="medium">Medium</label><br>
+            <label class="create__container__ctn__difficulty" for="medium">Medium</label><br>
 
             <input type="radio" id="easy" name="difficulty" value="easy">
-            <label for="easy">Easy</label></br>
+            <label class="create__container__ctn__difficulty" for="easy">Easy</label></br>
 
-            <input type="hidden" name="id" value="<?= $id ?>" />
+            <input class="create__container__ctn__difficulty" type="hidden" name="id" value="<?= $id ?>" />
 
-            <button type="submit" value="submit" name="submit">Submit</button>
+            <button class="create__container__ctn__button" type="submit" value="submit" name="submit">Submit</button>
         </form>
     </div>
     <?php if (isset($_GET["error"])){
