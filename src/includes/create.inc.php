@@ -32,7 +32,7 @@
         }
 
         if (filterdDistance($elevation) !== false){
-            header("location: ../create.php?error=invalidDistance");
+            header("location: ../create.php?error=invalidelevation");
             exit();
         }
 
@@ -44,6 +44,6 @@
         createUser($conn, $name, $difficulty, $travel, $duration, $elevation);
 
     } else {
-        header("location:./index.php");
+        header("location:./index.php?error=invalidpath");
         exit();
     }
