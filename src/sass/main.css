@@ -358,12 +358,15 @@ table {
 .headersmall__container__logo {
   margin: 0;
   width: 5rem;
+  height: auto;
 }
 
 .headersmall__container__logo img {
-  width: 12rem;
-  height: 12rem;
+  width: 7rem;
+  height: auto;
   padding-right: 2rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .headersmall__container .top {
