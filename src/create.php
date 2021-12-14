@@ -1,5 +1,5 @@
 <?php
-    include_once 'header.php';
+    include_once 'headersmall.php';
 ?>
 <section class="create">
 <div class="create__container">
