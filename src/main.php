@@ -39,7 +39,7 @@ try{
         <p class="card__elevation__theme">Elevation</p>
           <p><?= $hikes['elevation_gain']?> m</p>
         </div>
-      
+
         <div class="card__ctn-btn">
           <form method="post" action="delete.php?id='.$hike['id'].'">
           <input type="submit" class="card__btn delete" value="DELETE"> 
