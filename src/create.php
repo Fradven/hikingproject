@@ -16,9 +16,9 @@
             <input class="create__container__ctn__input" type="text" id="travel" name="travel" placeholder="In kilometers..."><br>
             
             <label for="duration" class="label">Duration : <br/></label>
-            <input type="number" name="durationhours" id="hours" min="0" style="width: 3rem;">
+            <input class="create__container__ctn__input" type="number" name="durationhours" id="hours" min="0" style="width: 3rem;">
             <span style="font-size:0.7em;">hours</span>
-            <input type="number" name="durationminutes" id="minutes" min="0" max="59" style="width: 3rem;">
+            <input class="create__container__ctn__input" type="number" name="durationminutes" id="minutes" min="0" max="59" style="width: 3rem;">
             <span style="font-size:0.7em;">minutes</span></br>
             
             <label class="create__container__ctn__label" for="elevation">Elevation Gained: </label><br>
